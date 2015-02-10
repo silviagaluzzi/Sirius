@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B213A1D7EB00DA740F /* CFNetwork.framework */; };
+		092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B413A1D7F000DA740F /* SystemConfiguration.framework */; };
+		092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B613A1D83C00DA740F /* MobileCoreServices.framework */; };
+		095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095ACE8513C68EA300566243 /* AudioToolbox.framework */; };
+		099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */; };
+		09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07113A1D52D009C3FCF /* UIKit.framework */; };
+		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
+		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
+		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		5554BD8C1A895CBF00B3A408 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5554BD8B1A895CBF00B3A408 /* FacebookSDK.framework */; };
+		5554BDCA1A89607200B3A408 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5554BD921A89607100B3A408 /* libGoogleAnalyticsServices.a */; };
+		5554BDCB1A89607200B3A408 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD941A89607100B3A408 /* LoginViewController.m */; };
+		5554BDCC1A89607200B3A408 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD961A89607100B3A408 /* MainController.m */; };
+		5554BDCD1A89607200B3A408 /* PAPBaseTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD991A89607100B3A408 /* PAPBaseTextCell.m */; };
+		5554BDCE1A89607200B3A408 /* PAPCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD9B1A89607100B3A408 /* PAPCache.m */; };
+		5554BDCF1A89607200B3A408 /* PAPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD9D1A89607100B3A408 /* PAPConstants.m */; };
+		5554BDD01A89607200B3A408 /* PAPProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BD9F1A89607100B3A408 /* PAPProfileImageView.m */; };
+		5554BDD11A89607200B3A408 /* PAPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDA11A89607100B3A408 /* PAPUtility.m */; };
+		5554BDD21A89607200B3A408 /* SiriusActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDA31A89607100B3A408 /* SiriusActivity.m */; };
+		5554BDD31A89607200B3A408 /* SiriusActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */; };
+		5554BDD41A89607200B3A408 /* SiriusActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */; };
+		5554BDD51A89607200B3A408 /* SiriusCameraNavControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDA81A89607200B3A408 /* SiriusCameraNavControllerViewController.m */; };
+		5554BDD61A89607200B3A408 /* SiriusCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDAA1A89607200B3A408 /* SiriusCameraViewController.m */; };
+		5554BDD71A89607200B3A408 /* SiriusCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDAB1A89607200B3A408 /* SiriusCameraViewController.xib */; };
+		5554BDD81A89607200B3A408 /* SiriusFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */; };
+		5554BDD91A89607200B3A408 /* SiriusFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */; };
+		5554BDDA1A89607200B3A408 /* SiriusLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDB01A89607200B3A408 /* SiriusLogInViewController.m */; };
+		5554BDDB1A89607200B3A408 /* SiriusPet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDB21A89607200B3A408 /* SiriusPet.m */; };
+		5554BDDC1A89607200B3A408 /* SiriusPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDB41A89607200B3A408 /* SiriusPhoto.m */; };
+		5554BDDD1A89607200B3A408 /* SiriusProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */; };
+		5554BDDE1A89607200B3A408 /* SiriusProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */; };
+		5554BDDF1A89607200B3A408 /* SiriusProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDB91A89607200B3A408 /* SiriusProfileViewController.m */; };
+		5554BDE01A89607200B3A408 /* SiriusProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */; };
+		5554BDE11A89607200B3A408 /* SiriusSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDBC1A89607200B3A408 /* SiriusSignUpViewController.m */; };
+		5554BDE21A89607200B3A408 /* SiriusUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDBE1A89607200B3A408 /* SiriusUser.m */; };
+		5554BDE41A89607200B3A408 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */; };
+		5554BDE51A89607200B3A408 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDC41A89607200B3A408 /* UIImage+AlphaAdditions.m */; };
+		5554BDE61A89607200B3A408 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDC61A89607200B3A408 /* UIImage+ResizeAdditions.m */; };
+		5554BDE71A89607200B3A408 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDC81A89607200B3A408 /* UIImage+RoundedCornerAdditions.m */; };
+		5554BDE81A8960DB00B3A408 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; };
+		5554BDE91A8960E200B3A408 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF551613CC42002132AF /* Social.framework */; };
+		5554BDEC1A89684400B3A408 /* SiriusAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDEB1A89684400B3A408 /* SiriusAppDelegate.m */; };
+		5554BDF31A89688400B3A408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDF21A89688400B3A408 /* main.m */; };
+		5554BDF71A89691F00B3A408 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDF41A89691F00B3A408 /* Default-568h@2x.png */; };
+		5554BDF81A89691F00B3A408 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDF51A89691F00B3A408 /* Default.png */; };
+		5554BDF91A89691F00B3A408 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDF61A89691F00B3A408 /* Default@2x.png */; };
+		5554BDFB1A89692D00B3A408 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDFA1A89692D00B3A408 /* Info.plist */; };
+		5554BDFD1A89693900B3A408 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5554BDFC1A89693900B3A408 /* Entitlements.plist */; };
+		5554BE001A8969CD00B3A408 /* SiriusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */; };
+		5554BE031A896BA900B3A408 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5554BE021A896BA900B3A408 /* InfoPlist.strings */; };
+		5554BE061A896C0100B3A408 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5554BE041A896C0100B3A408 /* MainWindow.xib */; };
+		5554BF071A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5554BF061A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m */; };
+		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		811B095C1A09503D008B3393 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811B095B1A09503D008B3393 /* ParseUI.framework */; };
+		817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817AD67B196B009E0014C796 /* Bolts.framework */; };
+		81A6CA5D1A2EA09D00297C39 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA5C1A2EA09D00297C39 /* ParseCrashReporting.framework */; };
+		81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */; };
+		81DDFD1919B4A60300BE649C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1719B4A60300BE649C /* Parse.framework */; };
+		81DDFD1A19B4A60300BE649C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */; };
+		91D261791A36EB67005D713D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D261781A36EB67005D713D /* libsqlite3.0.dylib */; };
+		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		092354B213A1D7EB00DA740F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		092354B413A1D7F000DA740F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		092354B613A1D83C00DA740F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		095ACE8513C68EA300566243 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		09ABC06D13A1D52D009C3FCF /* SiriusProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriusProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09ABC07113A1D52D009C3FCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5554BD8B1A895CBF00B3A408 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		5554BD921A89607100B3A408 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = SOURCE_ROOT; };
+		5554BD931A89607100B3A408 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BD941A89607100B3A408 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BD951A89607100B3A408 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = SOURCE_ROOT; };
+		5554BD961A89607100B3A408 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = SOURCE_ROOT; };
+		5554BD971A89607100B3A408 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = SOURCE_ROOT; };
+		5554BD981A89607100B3A408 /* PAPBaseTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPBaseTextCell.h; sourceTree = SOURCE_ROOT; };
+		5554BD991A89607100B3A408 /* PAPBaseTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPBaseTextCell.m; sourceTree = SOURCE_ROOT; };
+		5554BD9A1A89607100B3A408 /* PAPCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPCache.h; sourceTree = SOURCE_ROOT; };
+		5554BD9B1A89607100B3A408 /* PAPCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPCache.m; sourceTree = SOURCE_ROOT; };
+		5554BD9C1A89607100B3A408 /* PAPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPConstants.h; sourceTree = SOURCE_ROOT; };
+		5554BD9D1A89607100B3A408 /* PAPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPConstants.m; sourceTree = SOURCE_ROOT; };
+		5554BD9E1A89607100B3A408 /* PAPProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPProfileImageView.h; sourceTree = SOURCE_ROOT; };
+		5554BD9F1A89607100B3A408 /* PAPProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPProfileImageView.m; sourceTree = SOURCE_ROOT; };
+		5554BDA01A89607100B3A408 /* PAPUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPUtility.h; sourceTree = SOURCE_ROOT; };
+		5554BDA11A89607100B3A408 /* PAPUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPUtility.m; sourceTree = SOURCE_ROOT; };
+		5554BDA21A89607100B3A408 /* SiriusActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusActivity.h; sourceTree = SOURCE_ROOT; };
+		5554BDA31A89607100B3A408 /* SiriusActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusActivity.m; sourceTree = SOURCE_ROOT; };
+		5554BDA41A89607100B3A408 /* SiriusActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusActivityViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusActivityViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusActivityViewController.xib; sourceTree = SOURCE_ROOT; };
+		5554BDA71A89607200B3A408 /* SiriusCameraNavControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusCameraNavControllerViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDA81A89607200B3A408 /* SiriusCameraNavControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusCameraNavControllerViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDA91A89607200B3A408 /* SiriusCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusCameraViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDAA1A89607200B3A408 /* SiriusCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusCameraViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDAB1A89607200B3A408 /* SiriusCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusCameraViewController.xib; sourceTree = SOURCE_ROOT; };
+		5554BDAC1A89607200B3A408 /* SiriusFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusFeedViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusFeedViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusFeedViewController.xib; sourceTree = SOURCE_ROOT; };
+		5554BDAF1A89607200B3A408 /* SiriusLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusLogInViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDB01A89607200B3A408 /* SiriusLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusLogInViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDB11A89607200B3A408 /* SiriusPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusPet.h; sourceTree = SOURCE_ROOT; };
+		5554BDB21A89607200B3A408 /* SiriusPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusPet.m; sourceTree = SOURCE_ROOT; };
+		5554BDB31A89607200B3A408 /* SiriusPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusPhoto.h; sourceTree = SOURCE_ROOT; };
+		5554BDB41A89607200B3A408 /* SiriusPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusPhoto.m; sourceTree = SOURCE_ROOT; };
+		5554BDB51A89607200B3A408 /* SiriusProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusProfileEditViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusProfileEditViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusProfileEditViewController.xib; sourceTree = SOURCE_ROOT; };
+		5554BDB81A89607200B3A408 /* SiriusProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDB91A89607200B3A408 /* SiriusProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusProfileViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusProfileViewController.xib; sourceTree = SOURCE_ROOT; };
+		5554BDBB1A89607200B3A408 /* SiriusSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusSignUpViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BDBC1A89607200B3A408 /* SiriusSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusSignUpViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BDBD1A89607200B3A408 /* SiriusUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusUser.h; sourceTree = SOURCE_ROOT; };
+		5554BDBE1A89607200B3A408 /* SiriusUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusUser.m; sourceTree = SOURCE_ROOT; };
+		5554BDC11A89607200B3A408 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = SOURCE_ROOT; };
+		5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = SOURCE_ROOT; };
+		5554BDC31A89607200B3A408 /* UIImage+AlphaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AlphaAdditions.h"; sourceTree = SOURCE_ROOT; };
+		5554BDC41A89607200B3A408 /* UIImage+AlphaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AlphaAdditions.m"; sourceTree = SOURCE_ROOT; };
+		5554BDC51A89607200B3A408 /* UIImage+ResizeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeAdditions.h"; sourceTree = SOURCE_ROOT; };
+		5554BDC61A89607200B3A408 /* UIImage+ResizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeAdditions.m"; sourceTree = SOURCE_ROOT; };
+		5554BDC71A89607200B3A408 /* UIImage+RoundedCornerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCornerAdditions.h"; sourceTree = SOURCE_ROOT; };
+		5554BDC81A89607200B3A408 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = SOURCE_ROOT; };
+		5554BDC91A89607200B3A408 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = SOURCE_ROOT; };
+		5554BDEA1A89684400B3A408 /* SiriusAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SiriusAppDelegate.h; path = SiriusProject/SiriusAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		5554BDEB1A89684400B3A408 /* SiriusAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiriusAppDelegate.m; path = SiriusProject/SiriusAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		5554BDF21A89688400B3A408 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SiriusProject/main.m; sourceTree = SOURCE_ROOT; };
+		5554BDF41A89691F00B3A408 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SiriusProject/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		5554BDF51A89691F00B3A408 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = SiriusProject/Default.png; sourceTree = SOURCE_ROOT; };
+		5554BDF61A89691F00B3A408 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "SiriusProject/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		5554BDFA1A89692D00B3A408 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SiriusProject/Info.plist; sourceTree = SOURCE_ROOT; };
+		5554BDFC1A89693900B3A408 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = SiriusProject/Entitlements.plist; sourceTree = SOURCE_ROOT; };
+		5554BDFE1A89695E00B3A408 /* SiriusProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SiriusProject-Prefix.pch"; path = "SiriusProject/SiriusProject-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiriusViewController.m; path = SiriusProject/SiriusViewController.m; sourceTree = SOURCE_ROOT; };
+		5554BE021A896BA900B3A408 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		5554BE051A896C0100B3A408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = SiriusProject/en.lproj/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		5554BF041A8A9A0B00B3A408 /* SiriusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SiriusViewController.h; path = SiriusProject/SiriusViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BF051A8A9AB400B3A408 /* SiriusTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusTabBarControllerViewController.h; sourceTree = SOURCE_ROOT; };
+		5554BF061A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusTabBarControllerViewController.m; sourceTree = SOURCE_ROOT; };
+		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		811B095B1A09503D008B3393 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		817AD67B196B009E0014C796 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		81A6CA5C1A2EA09D00297C39 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		81DDFD1719B4A60300BE649C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		91D261781A36EB67005D713D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09ABC06A13A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5554BDE91A8960E200B3A408 /* Social.framework in Frameworks */,
+				5554BDE81A8960DB00B3A408 /* Accounts.framework in Frameworks */,
+				91D261791A36EB67005D713D /* libsqlite3.0.dylib in Frameworks */,
+				5554BD8C1A895CBF00B3A408 /* FacebookSDK.framework in Frameworks */,
+				81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */,
+				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
+				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
+				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
+				81A6CA5D1A2EA09D00297C39 /* ParseCrashReporting.framework in Frameworks */,
+				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
+				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
+				09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */,
+				811B095C1A09503D008B3393 /* ParseUI.framework in Frameworks */,
+				095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */,
+				092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */,
+				81DDFD1A19B4A60300BE649C /* ParseFacebookUtils.framework in Frameworks */,
+				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
+				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
+				81DDFD1919B4A60300BE649C /* Parse.framework in Frameworks */,
+				5554BDCA1A89607200B3A408 /* libGoogleAnalyticsServices.a in Frameworks */,
+				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
+				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
+				817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09ABC06213A1D52D009C3FCF = {
+			isa = PBXGroup;
+			children = (
+				5554BD891A895C7900B3A408 /* Library */,
+				09ABC07713A1D52D009C3FCF /* SiriusProject */,
+				09ABC07013A1D52D009C3FCF /* Frameworks */,
+				09ABC06E13A1D52D009C3FCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09ABC06E13A1D52D009C3FCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09ABC06D13A1D52D009C3FCF /* SiriusProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91D261781A36EB67005D713D /* libsqlite3.0.dylib */,
+				81DDFD1719B4A60300BE649C /* Parse.framework */,
+				811B095B1A09503D008B3393 /* ParseUI.framework */,
+				81A6CA5C1A2EA09D00297C39 /* ParseCrashReporting.framework */,
+				81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */,
+				817AD67B196B009E0014C796 /* Bolts.framework */,
+				81A6CA5E1A2EA0B800297C39 /* System Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
+			isa = PBXGroup;
+			children = (
+				5554BF051A8A9AB400B3A408 /* SiriusTabBarControllerViewController.h */,
+				5554BF061A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m */,
+				5554BD931A89607100B3A408 /* LoginViewController.h */,
+				5554BD941A89607100B3A408 /* LoginViewController.m */,
+				5554BD951A89607100B3A408 /* MainController.h */,
+				5554BD961A89607100B3A408 /* MainController.m */,
+				5554BD971A89607100B3A408 /* Notifications.h */,
+				5554BD981A89607100B3A408 /* PAPBaseTextCell.h */,
+				5554BD991A89607100B3A408 /* PAPBaseTextCell.m */,
+				5554BD9A1A89607100B3A408 /* PAPCache.h */,
+				5554BD9B1A89607100B3A408 /* PAPCache.m */,
+				5554BD9C1A89607100B3A408 /* PAPConstants.h */,
+				5554BD9D1A89607100B3A408 /* PAPConstants.m */,
+				5554BD9E1A89607100B3A408 /* PAPProfileImageView.h */,
+				5554BD9F1A89607100B3A408 /* PAPProfileImageView.m */,
+				5554BDA01A89607100B3A408 /* PAPUtility.h */,
+				5554BDA11A89607100B3A408 /* PAPUtility.m */,
+				5554BDA21A89607100B3A408 /* SiriusActivity.h */,
+				5554BDA31A89607100B3A408 /* SiriusActivity.m */,
+				5554BDA41A89607100B3A408 /* SiriusActivityViewController.h */,
+				5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */,
+				5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */,
+				5554BDA71A89607200B3A408 /* SiriusCameraNavControllerViewController.h */,
+				5554BDA81A89607200B3A408 /* SiriusCameraNavControllerViewController.m */,
+				5554BDA91A89607200B3A408 /* SiriusCameraViewController.h */,
+				5554BDAA1A89607200B3A408 /* SiriusCameraViewController.m */,
+				5554BDAB1A89607200B3A408 /* SiriusCameraViewController.xib */,
+				5554BDAC1A89607200B3A408 /* SiriusFeedViewController.h */,
+				5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */,
+				5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */,
+				5554BDAF1A89607200B3A408 /* SiriusLogInViewController.h */,
+				5554BDB01A89607200B3A408 /* SiriusLogInViewController.m */,
+				5554BDB11A89607200B3A408 /* SiriusPet.h */,
+				5554BDB21A89607200B3A408 /* SiriusPet.m */,
+				5554BDB31A89607200B3A408 /* SiriusPhoto.h */,
+				5554BDB41A89607200B3A408 /* SiriusPhoto.m */,
+				5554BDB51A89607200B3A408 /* SiriusProfileEditViewController.h */,
+				5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */,
+				5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */,
+				5554BDB81A89607200B3A408 /* SiriusProfileViewController.h */,
+				5554BDB91A89607200B3A408 /* SiriusProfileViewController.m */,
+				5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */,
+				5554BDBB1A89607200B3A408 /* SiriusSignUpViewController.h */,
+				5554BDBC1A89607200B3A408 /* SiriusSignUpViewController.m */,
+				5554BDBD1A89607200B3A408 /* SiriusUser.h */,
+				5554BDBE1A89607200B3A408 /* SiriusUser.m */,
+				5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */,
+				5554BDC11A89607200B3A408 /* TTTTimeIntervalFormatter.h */,
+				5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */,
+				5554BDC31A89607200B3A408 /* UIImage+AlphaAdditions.h */,
+				5554BDC41A89607200B3A408 /* UIImage+AlphaAdditions.m */,
+				5554BDC51A89607200B3A408 /* UIImage+ResizeAdditions.h */,
+				5554BDC61A89607200B3A408 /* UIImage+ResizeAdditions.m */,
+				5554BDC71A89607200B3A408 /* UIImage+RoundedCornerAdditions.h */,
+				5554BF041A8A9A0B00B3A408 /* SiriusViewController.h */,
+				5554BDC81A89607200B3A408 /* UIImage+RoundedCornerAdditions.m */,
+				5554BDC91A89607200B3A408 /* Utility.h */,
+				5554BDEA1A89684400B3A408 /* SiriusAppDelegate.h */,
+				5554BDEB1A89684400B3A408 /* SiriusAppDelegate.m */,
+				09ABC07813A1D52D009C3FCF /* Supporting Files */,
+			);
+			name = SiriusProject;
+			path = ParseStarterProject;
+			sourceTree = "<group>";
+		};
+		09ABC07813A1D52D009C3FCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5554BE041A896C0100B3A408 /* MainWindow.xib */,
+				5554BDF41A89691F00B3A408 /* Default-568h@2x.png */,
+				5554BDF51A89691F00B3A408 /* Default.png */,
+				5554BDF61A89691F00B3A408 /* Default@2x.png */,
+				5554BDFA1A89692D00B3A408 /* Info.plist */,
+				5554BDFC1A89693900B3A408 /* Entitlements.plist */,
+				5554BE021A896BA900B3A408 /* InfoPlist.strings */,
+				5554BDFE1A89695E00B3A408 /* SiriusProject-Prefix.pch */,
+				5554BDF21A89688400B3A408 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5554BD891A895C7900B3A408 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5554BD921A89607100B3A408 /* libGoogleAnalyticsServices.a */,
+				5554BD8A1A895C8400B3A408 /* Facebook */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		5554BD8A1A895C8400B3A408 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				5554BD8B1A895CBF00B3A408 /* FacebookSDK.framework */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6372FF571613CC47002132AF /* AdSupport.framework */,
+				6372FF551613CC42002132AF /* Social.framework */,
+				6372FF521613CC3C002132AF /* Accounts.framework */,
+				095ACE8513C68EA300566243 /* AudioToolbox.framework */,
+				092354B213A1D7EB00DA740F /* CFNetwork.framework */,
+				743D7B6C157DA60100084B67 /* CoreGraphics.framework */,
+				97E18B1E1624CB5700B17A67 /* CoreLocation.framework */,
+				09ABC07313A1D52D009C3FCF /* Foundation.framework */,
+				6332375315E438E900AE2736 /* libsqlite3.dylib */,
+				099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */,
+				81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */,
+				092354B613A1D83C00DA740F /* MobileCoreServices.framework */,
+				2FCDD6AF14A573F500295AAC /* QuartzCore.framework */,
+				09BEF34B13D51C3F001BBCDB /* Security.framework */,
+				4998650415BF305000803E05 /* StoreKit.framework */,
+				092354B413A1D7F000DA740F /* SystemConfiguration.framework */,
+				09ABC07113A1D52D009C3FCF /* UIKit.framework */,
+			);
+			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09ABC06C13A1D52D009C3FCF /* SiriusProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "SiriusProject" */;
+			buildPhases = (
+				09ABC06913A1D52D009C3FCF /* Sources */,
+				09ABC06A13A1D52D009C3FCF /* Frameworks */,
+				09ABC06B13A1D52D009C3FCF /* Resources */,
+				81A6CA5F1A2EA3D600297C39 /* Upload Symbol Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriusProject;
+			productName = ParseStarterProject;
+			productReference = 09ABC06D13A1D52D009C3FCF /* SiriusProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09ABC06413A1D52D009C3FCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "SiriusProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09ABC06213A1D52D009C3FCF;
+			productRefGroup = 09ABC06E13A1D52D009C3FCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09ABC06C13A1D52D009C3FCF /* SiriusProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09ABC06B13A1D52D009C3FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5554BE061A896C0100B3A408 /* MainWindow.xib in Resources */,
+				5554BDF91A89691F00B3A408 /* Default@2x.png in Resources */,
+				5554BE031A896BA900B3A408 /* InfoPlist.strings in Resources */,
+				5554BDD71A89607200B3A408 /* SiriusCameraViewController.xib in Resources */,
+				5554BDDE1A89607200B3A408 /* SiriusProfileEditViewController.xib in Resources */,
+				5554BDFD1A89693900B3A408 /* Entitlements.plist in Resources */,
+				5554BDF81A89691F00B3A408 /* Default.png in Resources */,
+				5554BDFB1A89692D00B3A408 /* Info.plist in Resources */,
+				5554BDF71A89691F00B3A408 /* Default-568h@2x.png in Resources */,
+				5554BDD91A89607200B3A408 /* SiriusFeedViewController.xib in Resources */,
+				5554BDE01A89607200B3A408 /* SiriusProfileViewController.xib in Resources */,
+				5554BDD41A89607200B3A408 /* SiriusActivityViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81A6CA5F1A2EA3D600297C39 /* Upload Symbol Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Symbol Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will upload symbol files for your application,\n# so all your crash reports are going to be symbolicated\n\n# Important!\n# Before using the script, please initialize CloudCode folder and replace <path_to_cloudcode_folder> with the path to it\n#\n# Read more on Parse.com - https://parse.com/apps/quickstart#analytics/crashreporting/ios/\n############################################################\n\n\n# export PATH=/usr/local/bin:$PATH\n# cd <path_to_cloudcode_folder>\n\n# parse symbols \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09ABC06913A1D52D009C3FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5554BDD51A89607200B3A408 /* SiriusCameraNavControllerViewController.m in Sources */,
+				5554BDE11A89607200B3A408 /* SiriusSignUpViewController.m in Sources */,
+				5554BDCD1A89607200B3A408 /* PAPBaseTextCell.m in Sources */,
+				5554BDE61A89607200B3A408 /* UIImage+ResizeAdditions.m in Sources */,
+				5554BDD61A89607200B3A408 /* SiriusCameraViewController.m in Sources */,
+				5554BDDC1A89607200B3A408 /* SiriusPhoto.m in Sources */,
+				5554BDE21A89607200B3A408 /* SiriusUser.m in Sources */,
+				5554BDE51A89607200B3A408 /* UIImage+AlphaAdditions.m in Sources */,
+				5554BDD01A89607200B3A408 /* PAPProfileImageView.m in Sources */,
+				5554BDCE1A89607200B3A408 /* PAPCache.m in Sources */,
+				5554BDD81A89607200B3A408 /* SiriusFeedViewController.m in Sources */,
+				5554BE001A8969CD00B3A408 /* SiriusViewController.m in Sources */,
+				5554BDEC1A89684400B3A408 /* SiriusAppDelegate.m in Sources */,
+				5554BDDA1A89607200B3A408 /* SiriusLogInViewController.m in Sources */,
+				5554BDE71A89607200B3A408 /* UIImage+RoundedCornerAdditions.m in Sources */,
+				5554BDDF1A89607200B3A408 /* SiriusProfileViewController.m in Sources */,
+				5554BF071A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m in Sources */,
+				5554BDD11A89607200B3A408 /* PAPUtility.m in Sources */,
+				5554BDDB1A89607200B3A408 /* SiriusPet.m in Sources */,
+				5554BDD31A89607200B3A408 /* SiriusActivityViewController.m in Sources */,
+				5554BDDD1A89607200B3A408 /* SiriusProfileEditViewController.m in Sources */,
+				5554BDCC1A89607200B3A408 /* MainController.m in Sources */,
+				5554BDCB1A89607200B3A408 /* LoginViewController.m in Sources */,
+				5554BDE41A89607200B3A408 /* TTTTimeIntervalFormatter.m in Sources */,
+				5554BDCF1A89607200B3A408 /* PAPConstants.m in Sources */,
+				5554BDD21A89607200B3A408 /* SiriusActivity.m in Sources */,
+				5554BDF31A89688400B3A408 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5554BE041A896C0100B3A408 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5554BE051A896C0100B3A408 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09ABC08C13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09ABC08D13A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		09ABC08F13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SiriusProject/SiriusProject-Prefix.pch";
+				INFOPLIST_FILE = SiriusProject/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = SiriusProject;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09ABC09013A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SiriusProject/SiriusProject-Prefix.pch";
+				INFOPLIST_FILE = SiriusProject/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = SiriusProject;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "SiriusProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08C13A1D52E009C3FCF /* Debug */,
+				09ABC08D13A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "SiriusProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08F13A1D52E009C3FCF /* Debug */,
+				09ABC09013A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09ABC06413A1D52D009C3FCF /* Project object */;
+}
