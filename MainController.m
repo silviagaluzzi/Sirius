@@ -101,4 +101,37 @@
     }
 }
 
+//TODO: capire se tutti i campi possono essere recuperati così
+//e cosa succede se sono vuoti?
+
+- (void)facebookRequestDidLoad:(id)result {
+    
+    SiriusUser *user = [SiriusUser currentUser];
+    
+    if (user) {
+        if ([result objectForKey:@"first_name"] != nil){
+            [user setObject:[result objectForKey:@"first_name"] forKey:@"firstName"];
+
+        }
+        if ([result objectForKey:@"last_name"] != nil){
+            [user setObject:[result objectForKey:@"last_name"] forKey:@"lastName"];
+        }
+        if ([result objectForKey:@"gender"] != nil){
+
+            [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
+        }
+        if ([result objectForKey:@"user_birthday"] != nil){
+            
+            [user setObject:[result objectForKey:@"user_birthday"] forKey:@"birthDate"];
+        }
+        if ([result objectForKey:@"email"] != nil){
+
+            [user setObject:[result objectForKey:@"email"] forKey:@"email"];
+        }
+
+        [user save];
+    }
+    
+}
+
 @end

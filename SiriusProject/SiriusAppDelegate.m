@@ -27,10 +27,14 @@
 #define GATRACKINGID @"UA-?"
 #define PARSE_APPID @"???"
 #define PARSE_CLIENTKEY @"???"
+#define FACEBOOKAPPID @"?"
+
 #else
 #define GATRACKINGID @"UA-?"
 #define PARSE_APPID @"6j4TVHMyxhn0wnaBgZBQ5zIoUJxgsNXQ36SZwnCV"
 #define PARSE_CLIENTKEY @"nLoMY6qrLWQGfWEz2RvWdUijPkdSBAxc34dtL1JF"
+#define FACEBOOKAPPID @"752882844807738"
+
 #endif
 
 @implementation SiriusAppDelegate
@@ -178,9 +182,9 @@
     
     
     //TODO: FB
-    /*        [FBSettings setDefaultAppID:FACEBOOKAPPID];
-     [FBAppEvents activateApp];
-     */
+    [FBSettings setDefaultAppID:FACEBOOKAPPID];
+    [FBAppEvents activateApp];
+    
     
     self.tabController = [[SiriusTabBarControllerViewController alloc] init];
     self.window.rootViewController = self.tabController;

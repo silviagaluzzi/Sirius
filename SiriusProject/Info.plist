@@ -26,6 +26,19 @@
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>752882844807738</string>
+	<key>FacebookDisplayName</key>
+	<string>Sirius</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb752882844807738</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>

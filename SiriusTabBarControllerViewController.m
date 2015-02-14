@@ -122,38 +122,41 @@
     
 }
 
-//TODO: è da fare anche per il signup
 - (void)loggedInAsUser:(SiriusUser *)user {
     
-    /*if (![[MainController sharedController] isValidUser:user] && [PFFacebookUtils isLinkedWithUser: user]) {
-     
-     //TODO: progress hud
-     //        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
-     
-     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-     if (!error) {
-     [[MainController sharedController] facebookRequestDidLoad:result];
-     } else {
-     [[MainController sharedController] facebookRequestDidFailWithError:error];
-     }
-     [self dismissViewControllerAnimated:YES completion:nil];
-     
-     //  [SVProgressHUD dismiss];
-     }];
-     } else {
-     
-     if (!user.displayName) {
-     user.displayName	= [user username];
-     [user saveEventually];
-     }
-     */
+    //if (![[MainController sharedController] isValidUser:user] && [PFFacebookUtils isLinkedWithUser: user]) {
+        
+        //TODO: progress hud
+        //        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+        
+        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if (!error) {
+                [[MainController sharedController] facebookRequestDidLoad:result];
+                [self dismissViewControllerAnimated:YES completion:nil];
+
+            } else {
+                [[MainController sharedController] facebookRequestDidFailWithError:error];
+            }
+            
+            //  [SVProgressHUD dismiss];
+        }];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    } else {
+        
+  //      if (!user.displayName) {
+    //        user.displayName	= [user username];
+      //      [user saveEventually];
+        //}
+        
+        
+        //[self dismissViewControllerAnimated:YES completion:nil];
     //}
-    
+ 
+ 
     //TODO:PUSH NOTIFICATIONS
     //    [[MainController sharedController] updateUserForPushNotifications: user];
     
+    [self dismissViewControllerAnimated:YES completion:nil];
     self.selectedIndex	= 0;
     
     [[MainController sharedController] postNotificationWithName:NOTIFICATIONS_HOME_RELOAD];

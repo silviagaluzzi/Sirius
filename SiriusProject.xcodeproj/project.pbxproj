@@ -237,6 +237,7 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
+				5554BF091A8AA66500B3A408 /* Models */,
 				5554BF051A8A9AB400B3A408 /* SiriusTabBarControllerViewController.h */,
 				5554BF061A8A9AB400B3A408 /* SiriusTabBarControllerViewController.m */,
 				5554BD931A89607100B3A408 /* LoginViewController.h */,
@@ -254,8 +255,6 @@
 				5554BD9F1A89607100B3A408 /* PAPProfileImageView.m */,
 				5554BDA01A89607100B3A408 /* PAPUtility.h */,
 				5554BDA11A89607100B3A408 /* PAPUtility.m */,
-				5554BDA21A89607100B3A408 /* SiriusActivity.h */,
-				5554BDA31A89607100B3A408 /* SiriusActivity.m */,
 				5554BDA41A89607100B3A408 /* SiriusActivityViewController.h */,
 				5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */,
 				5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */,
@@ -269,10 +268,6 @@
 				5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */,
 				5554BDAF1A89607200B3A408 /* SiriusLogInViewController.h */,
 				5554BDB01A89607200B3A408 /* SiriusLogInViewController.m */,
-				5554BDB11A89607200B3A408 /* SiriusPet.h */,
-				5554BDB21A89607200B3A408 /* SiriusPet.m */,
-				5554BDB31A89607200B3A408 /* SiriusPhoto.h */,
-				5554BDB41A89607200B3A408 /* SiriusPhoto.m */,
 				5554BDB51A89607200B3A408 /* SiriusProfileEditViewController.h */,
 				5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */,
 				5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */,
@@ -281,8 +276,6 @@
 				5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */,
 				5554BDBB1A89607200B3A408 /* SiriusSignUpViewController.h */,
 				5554BDBC1A89607200B3A408 /* SiriusSignUpViewController.m */,
-				5554BDBD1A89607200B3A408 /* SiriusUser.h */,
-				5554BDBE1A89607200B3A408 /* SiriusUser.m */,
 				5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */,
 				5554BDC11A89607200B3A408 /* TTTTimeIntervalFormatter.h */,
 				5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */,
@@ -333,6 +326,21 @@
 				5554BD8B1A895CBF00B3A408 /* FacebookSDK.framework */,
 			);
 			name = Facebook;
+			sourceTree = "<group>";
+		};
+		5554BF091A8AA66500B3A408 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5554BDB11A89607200B3A408 /* SiriusPet.h */,
+				5554BDB21A89607200B3A408 /* SiriusPet.m */,
+				5554BDB31A89607200B3A408 /* SiriusPhoto.h */,
+				5554BDB41A89607200B3A408 /* SiriusPhoto.m */,
+				5554BDBD1A89607200B3A408 /* SiriusUser.h */,
+				5554BDBE1A89607200B3A408 /* SiriusUser.m */,
+				5554BDA21A89607100B3A408 /* SiriusActivity.h */,
+				5554BDA31A89607100B3A408 /* SiriusActivity.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {

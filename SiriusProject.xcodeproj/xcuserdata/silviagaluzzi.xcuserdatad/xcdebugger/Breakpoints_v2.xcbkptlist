@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
-            timestampString = "445214914.936964"
+            timestampString = "445384241.910314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223">
+            startingLineNumber = "226"
+            endingLineNumber = "226">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
-            timestampString = "445214914.936964"
+            timestampString = "445384241.910314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327">
+            startingLineNumber = "330"
+            endingLineNumber = "330">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -37,13 +37,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SiriusProject/SiriusAppDelegate.m"
-            timestampString = "445291671.982987"
+            filePath = "MainController.m"
+            timestampString = "445382930.293572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-isValidUser:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -53,13 +53,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SiriusProject/SiriusAppDelegate.m"
-            timestampString = "445291671.982987"
+            filePath = "MainController.m"
+            timestampString = "445382931.170833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-userInterfaceSetup"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-isValidUser:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -69,13 +69,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SiriusProject/SiriusAppDelegate.m"
-            timestampString = "445291671.982987"
+            filePath = "PAPUtility.m"
+            timestampString = "445382950.924504"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "-userInterfaceSetup"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "+userHasValidFacebookData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -86,12 +86,90 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
-            timestampString = "445215354.835348"
+            timestampString = "445383981.84363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-loggedInAsUser:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SiriusTabBarControllerViewController loggedInAsUser:]"
+                  moduleName = "SiriusProject"
+                  urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
+                  timestampString = "445620343.675963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__55-[SiriusTabBarControllerViewController loggedInAsUser:]_block_invoke"
+                  moduleName = "SiriusProject"
+                  urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
+                  timestampString = "445620343.676136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriusTabBarControllerViewController.m"
+            timestampString = "445384241.910314"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-loggedInAsUser:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriusTabBarControllerViewController.m"
+            timestampString = "445384402.752355"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-loggedInAsUser:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MainController.m"
+            timestampString = "445385440.274595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-facebookRequestDidLoad:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
