@@ -101,7 +101,7 @@
                   symbolName = "-[SiriusTabBarControllerViewController loggedInAsUser:]"
                   moduleName = "SiriusProject"
                   urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
-                  timestampString = "445620343.675963"
+                  timestampString = "445627471.767537"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -115,7 +115,7 @@
                   symbolName = "__55-[SiriusTabBarControllerViewController loggedInAsUser:]_block_invoke"
                   moduleName = "SiriusProject"
                   urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
-                  timestampString = "445620343.676136"
+                  timestampString = "445627471.767983"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -170,6 +170,22 @@
             startingLineNumber = "109"
             endingLineNumber = "109"
             landmarkName = "-facebookRequestDidLoad:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriusSignUpViewController.m"
+            timestampString = "445627471.275081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-viewDidLayoutSubviews"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

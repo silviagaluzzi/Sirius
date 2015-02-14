@@ -14,8 +14,25 @@
 
 
 @implementation SiriusLogInViewController
+
+-(void) viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.logInView.backgroundColor = [UIColor whiteColor];
+    [self.logInView setLogo:nil];
+    
+}
+
+-(void) viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+
+    self.logInView.usernameField.placeholder = @"Email";
+    
+
+}
 @end
 
-//TODO: specific layout for Sirius
 
 
