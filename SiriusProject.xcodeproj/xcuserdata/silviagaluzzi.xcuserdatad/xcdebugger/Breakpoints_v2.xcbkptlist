@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
-            timestampString = "445384241.910314"
+            timestampString = "445712184.605405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226">
+            startingLineNumber = "269"
+            endingLineNumber = "269">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
-            timestampString = "445384241.910314"
+            timestampString = "445712184.605405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "330"
-            endingLineNumber = "330">
+            startingLineNumber = "373"
+            endingLineNumber = "373">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -82,7 +82,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
@@ -95,13 +95,13 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SiriusTabBarControllerViewController loggedInAsUser:]"
                   moduleName = "SiriusProject"
                   urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
-                  timestampString = "445627471.767537"
+                  timestampString = "445716101.654912"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -109,13 +109,13 @@
                   offsetFromSymbolStart = "64">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__55-[SiriusTabBarControllerViewController loggedInAsUser:]_block_invoke"
                   moduleName = "SiriusProject"
                   urlString = "file:///Users/silviagaluzzi/development/SiriusProject/SiriusTabBarControllerViewController.m"
-                  timestampString = "445627471.767983"
+                  timestampString = "445716101.655177"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -128,7 +128,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
@@ -144,7 +144,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SiriusTabBarControllerViewController.m"
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MainController.m"
-            timestampString = "445385440.274595"
+            timestampString = "445699686.903301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-facebookRequestDidLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -179,13 +179,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SiriusSignUpViewController.m"
-            timestampString = "445627471.275081"
+            filePath = "SiriusTabBarControllerViewController.m"
+            timestampString = "445704250.457893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-viewDidLayoutSubviews"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-signUpViewController:shouldBeginSignUp:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriusTabBarControllerViewController.m"
+            timestampString = "445712184.605405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "-signUpViewController:didSignUpUser:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

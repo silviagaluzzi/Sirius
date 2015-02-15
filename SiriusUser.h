@@ -25,6 +25,7 @@
 @property (strong) NSString	*mobileNumber;
 @property (strong) NSString	*residenceCity;
 @property (strong) NSString	*residenceCountry;
+@property (strong) NSString	*pswConfirm;
 @property (strong) NSDate 	*createAt;
 @property (strong) NSDate 	*updateAt;
 

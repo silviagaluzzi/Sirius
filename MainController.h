@@ -14,6 +14,7 @@
 + (MainController *)sharedController;
 
 @property (nonatomic, readonly) int networkStatus;
+@property (nonatomic, strong) NSMutableDictionary* dictFields;
 
 //- (void)monitorReachability;
 //- (BOOL)isNetworkReachable;
@@ -31,6 +32,8 @@
 - (void)facebookRequestDidFailWithError:(NSError *)error;
 - (void)refreshCurrentUserData;
 //- (void)loadAttributesForPhoto:(PFObject*)photo;
+
+- (void) signUpFields:(NSMutableArray*) arrayFields;
 
 
 @end

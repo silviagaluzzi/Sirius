@@ -8,6 +8,14 @@
 
 #import <ParseUI/ParseUI.h>
 
-@interface SiriusSignUpViewController : PFSignUpViewController
+@interface SiriusSignUpViewController : PFSignUpViewController<PFSignUpViewControllerDelegate>
+
+@property (nonatomic,strong) PFTextField *firstName;
+@property (nonatomic,strong) PFTextField *lastName;
+@property (nonatomic,strong) PFTextField *gender;
+@property (nonatomic,strong) PFTextField *birthDate;
+@property (nonatomic,strong) PFTextField *pswConfirm;
+
+
 
 @end

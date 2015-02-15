@@ -22,6 +22,7 @@
 #import "SiriusProfileViewController.h"
 #import "SiriusActivityViewController.h"
 #import "SiriusCameraViewController.h"
+#import "MainController.h"
 
 #if APPSTORE
 #define GATRACKINGID @"UA-?"
@@ -43,6 +44,9 @@
 #pragma mark UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [MainController sharedController].dictFields = nil;
+    [MainController sharedController].dictFields = [[NSMutableDictionary alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

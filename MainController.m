@@ -101,9 +101,6 @@
     }
 }
 
-//TODO: capire se tutti i campi possono essere recuperati così
-//e cosa succede se sono vuoti?
-
 - (void)facebookRequestDidLoad:(id)result {
     
     SiriusUser *user = [SiriusUser currentUser];
@@ -130,6 +127,8 @@
         }
 
         [user save];
+        
+        self.
     }
     
 }

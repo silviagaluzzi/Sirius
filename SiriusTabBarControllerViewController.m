@@ -175,11 +175,52 @@
 }
 
 #pragma mark - PFSignUpViewControllerDelegate
-- (void) signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(SiriusUser *)user {
+- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+    
+    
+    //TODO: other required?! control PSW and email
+/*    BOOL informationComplete = YES;
+    for (id key in info) {
+        NSString *field = [info objectForKey:key];
+        if (![key isEqualToString:@"email"]) {
+            if (!field || field.length == 0) {
+                informationComplete = NO;
+                break;
+            }
+        }
+    }
+    
+    if (!informationComplete) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+    }
+    
+    return informationComplete;
+ */
+    
+    return YES;
+}
+
+- (void) signUpViewController:(SiriusSignUpViewController *)signUpController didSignUpUser:(SiriusUser *)user {
+    
+    //Sirius additional sigup fields
+    NSString* firstName = signUpController.firstName.text;
+    NSString* lastName = signUpController.lastName.text;
+    //NSString *birthDate =
+    NSString* gender = signUpController.gender.text;
+    //NSString* email = signUpController.signUpView.usernameField.text;
+    NSString* pswConfirm = signUpController.pswConfirm.text;
+
     
     NSString	*strPrefs	= [NSString stringWithFormat:@"%@ %@ %@ %@ %@", kNewsPushNotification, kPAPActivityTypeFollow, kPAPActivityTypeJoined,  kPAPActivityTypeLike, kPAPActivityTypeComment];
     
+    //we have to save all fields for the new user (all fields are required?)
     [user setObject:strPrefs forKey:@"channels"];
+    [user setObject:firstName forKey:@"firstName"];
+    [user setObject:lastName forKey:@"lastName"];
+    [user setObject:gender forKey:@"gender"];
+//    [user setObject:birthDate forKey:@"birthDate"];
+    //[user setObject:email forKey:@"email"];
+    
     [user save];
     
     [self loggedInAsUser:user];
@@ -188,5 +229,7 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     
 }
+
+
 
 @end
