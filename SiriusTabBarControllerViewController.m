@@ -15,6 +15,9 @@
 #import "SiriusSignUpViewController.h"
 #import "Notifications.h"
 #import "MainController.h"
+#import "SiriusCameraNavController.h"
+#import "DLCImagePickerController.h"
+
 
 
 @interface SiriusTabBarControllerViewController ()
@@ -119,6 +122,15 @@
 
 - (void)newPhoto:(UIButton*)sender {
     
+    DLCImagePickerController *picker = [[DLCImagePickerController alloc] init];
+    SiriusCameraNavController* navController = [[SiriusCameraNavController alloc] initWithRootViewController:picker];
+    picker.delegate = navController;
+    
+    [navController setNavigationBarHidden:YES];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+    
+
     
 }
 

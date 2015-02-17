@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DLCImagePickerController">
+            <connections>
+                <outlet property="blurToggleButton" destination="50" id="61"/>
+                <outlet property="cameraToggleButton" destination="37" id="48"/>
+                <outlet property="cancelButton" destination="36" id="44"/>
+                <outlet property="filterScrollView" destination="16" id="69"/>
+                <outlet property="filtersToggleButton" destination="35" id="64"/>
+                <outlet property="flashToggleButton" destination="77" id="78"/>
+                <outlet property="imageView" destination="7" id="43"/>
+                <outlet property="libraryToggleButton" destination="83" id="88"/>
+                <outlet property="photoBar" destination="31" id="73"/>
+                <outlet property="photoCaptureButton" destination="32" id="45"/>
+                <outlet property="retakeButton" destination="80" id="81"/>
+                <outlet property="topBar" destination="34" id="74"/>
+                <outlet property="view" destination="4" id="42"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                    <subviews>
+                        <button contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                            <rect key="frame" x="0.0" y="24" width="44" height="44"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="camera_close.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="47"/>
+                            </connections>
+                        </button>
+                        <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50">
+                            <rect key="frame" x="222" y="24" width="44" height="44"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="blur_off.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="blur-on.png"/>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleBlur:" destination="-1" eventType="touchUpInside" id="62"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="S7d-Q4-Yu0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="7" customClass="GPUImageView">
+                    <rect key="frame" x="0.0" y="68" width="320" height="320"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                            <rect key="frame" x="-8" y="144" width="320" height="75"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7" secondAttribute="height" multiplier="1:1" id="He4-Ku-eCq"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="51" appends="YES" id="52"/>
+                        <outletCollection property="gestureRecognizers" destination="65" appends="YES" id="66"/>
+                        <outletCollection property="gestureRecognizers" destination="89" appends="YES" id="90"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-pa-fih">
+                    <rect key="frame" x="0.0" y="390" width="320" height="44"/>
+                    <subviews>
+                        <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77">
+                            <rect key="frame" x="268" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="8c0-2g-G8D"/>
+                                <constraint firstAttribute="width" constant="44" id="j6R-Wl-Yw0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="camera_flash.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="camera_flash.png"/>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleFlash:" destination="-1" eventType="touchUpInside" id="79"/>
+                            </connections>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                            <rect key="frame" x="138" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="hWZ-lN-fxn"/>
+                                <constraint firstAttribute="width" constant="44" id="oAV-2e-Ya5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="camera_switchside.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="switchCamera" destination="-1" eventType="touchUpInside" id="49"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83">
+                            <rect key="frame" x="8" y="8" width="27" height="27"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="camera_gallery.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="filter-close.png"/>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="switchToLibrary:" destination="-1" eventType="touchUpInside" id="87"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="83" firstAttribute="leading" secondItem="5Qe-pa-fih" secondAttribute="leading" constant="8" id="1nt-G2-buV"/>
+                        <constraint firstAttribute="height" constant="44" id="1qd-aK-eQU"/>
+                        <constraint firstAttribute="centerY" secondItem="37" secondAttribute="centerY" id="4lS-8S-A8m"/>
+                        <constraint firstAttribute="centerY" secondItem="77" secondAttribute="centerY" id="6jg-3Z-FKb"/>
+                        <constraint firstAttribute="trailing" secondItem="77" secondAttribute="trailing" constant="8" id="QSJ-hm-g28"/>
+                        <constraint firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="X7d-tc-c3i"/>
+                        <constraint firstAttribute="centerY" secondItem="83" secondAttribute="centerY" id="Xr7-d2-ySf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31">
+                    <rect key="frame" x="0.0" y="436" width="320" height="133"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                            <rect key="frame" x="103" y="10" width="114" height="114"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="114" id="AeC-Jy-5Io"/>
+                                <constraint firstAttribute="height" constant="114" id="nJi-CT-eAS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                            <color key="tintColor" red="0.41176470590000003" green="0.31372549020000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="camera_click.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="46"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                            <rect key="frame" x="247" y="48" width="65" height="37"/>
+                            <color key="backgroundColor" red="0.078732638889999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="filter-open.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="filter-close.png"/>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleFilters:" destination="-1" eventType="touchUpInside" id="68"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80">
+                            <rect key="frame" x="0.0" y="52" width="79" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <state key="normal" title="Retake">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="retakePhoto:" destination="-1" eventType="touchUpInside" id="82"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="80" secondAttribute="centerY" id="Cd2-xK-cFW"/>
+                        <constraint firstAttribute="centerY" secondItem="32" secondAttribute="centerY" id="HWr-Ps-2sl"/>
+                        <constraint firstAttribute="centerY" secondItem="35" secondAttribute="centerY" id="mbh-0a-bfo"/>
+                        <constraint firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="uxp-zY-S4x"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="34" secondAttribute="trailing" id="CG6-cG-IOs"/>
+                <constraint firstItem="34" firstAttribute="top" secondItem="4" secondAttribute="top" id="D1A-HE-txa"/>
+                <constraint firstItem="5Qe-pa-fih" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="2" id="Ia1-au-GkA"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="34" secondAttribute="bottom" id="JkC-jz-gXk"/>
+                <constraint firstItem="31" firstAttribute="top" secondItem="5Qe-pa-fih" secondAttribute="bottom" constant="2" id="PwL-do-AOP"/>
+                <constraint firstAttribute="trailing" secondItem="31" secondAttribute="trailing" id="Qgf-VC-c5X"/>
+                <constraint firstItem="34" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="Rlg-ee-6Cf"/>
+                <constraint firstItem="5Qe-pa-fih" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="Vcx-xb-avl"/>
+                <constraint firstAttribute="bottom" secondItem="31" secondAttribute="bottom" constant="-1" id="Wo2-Xg-2gr"/>
+                <constraint firstItem="31" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="cdP-la-ZFs"/>
+                <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="e9g-ys-6Ck"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="m8o-3v-Ges"/>
+                <constraint firstAttribute="trailing" secondItem="5Qe-pa-fih" secondAttribute="trailing" id="t1y-BK-XAN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="248" y="260"/>
+        </view>
+        <pinchGestureRecognizer id="51">
+            <connections>
+                <action selector="handlePinch:" destination="-1" id="63"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="65">
+            <connections>
+                <action selector="handlePan:" destination="-1" id="67"/>
+            </connections>
+        </panGestureRecognizer>
+        <tapGestureRecognizer id="89">
+            <connections>
+                <action selector="handleTapToFocus:" destination="-1" id="91"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="blur-on.png" width="15" height="22"/>
+        <image name="blur_off.png" width="44" height="44"/>
+        <image name="camera_click.png" width="58" height="58"/>
+        <image name="camera_close.png" width="26" height="26"/>
+        <image name="camera_flash.png" width="24" height="24"/>
+        <image name="camera_gallery.png" width="27" height="27"/>
+        <image name="camera_switchside.png" width="32" height="29"/>
+        <image name="filter-close.png" width="29" height="28"/>
+        <image name="filter-open.png" width="28" height="28"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

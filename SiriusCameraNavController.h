@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SiriusCameraNavControllerViewController : UINavigationController
+@interface SiriusCameraNavController : UINavigationController
 
 @end

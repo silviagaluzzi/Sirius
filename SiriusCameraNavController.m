@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Silvia Galuzzi. All rights reserved.
 //
 
-#import "SiriusCameraNavControllerViewController.h"
+#import "SiriusCameraNavController.h"
 
-@interface SiriusCameraNavControllerViewController ()
+@interface SiriusCameraNavController ()
 
 @end
 
-@implementation SiriusCameraNavControllerViewController
+@implementation SiriusCameraNavController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

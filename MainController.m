@@ -128,7 +128,7 @@
 
         [user save];
         
-        self.
+        //qui devi aprire sigup
     }
     
 }
