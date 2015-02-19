@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLCImagePickerController.h"
 
 
-@interface SiriusCameraNavController : UINavigationController
+@interface SiriusCameraNavController : UINavigationController<DLCImagePickerDelegate>
+@property (nonatomic, strong) UIImage* photo;
+
 
 @end

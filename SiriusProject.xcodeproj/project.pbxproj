@@ -291,6 +291,29 @@
 		55D2F9451A93ECE400D7C626 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D2F9441A93ECE400D7C626 /* CoreVideo.framework */; };
 		55D2F9471A93ED0E00D7C626 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D2F9461A93ED0E00D7C626 /* OpenGLES.framework */; };
 		55D2F9491A93ED2B00D7C626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D2F9481A93ED2B00D7C626 /* AVFoundation.framework */; };
+		55D2F9601A93F22B00D7C626 /* camera_back@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F94B1A93F22B00D7C626 /* camera_back@1x.png */; };
+		55D2F9611A93F22B00D7C626 /* camera_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F94C1A93F22B00D7C626 /* camera_back@2x.png */; };
+		55D2F9621A93F22B00D7C626 /* camera_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F94D1A93F22B00D7C626 /* camera_back@3x.png */; };
+		55D2F9631A93F22B00D7C626 /* camera_click@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F94E1A93F22B00D7C626 /* camera_click@1x.png */; };
+		55D2F9641A93F22B00D7C626 /* camera_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F94F1A93F22B00D7C626 /* camera_click@2x.png */; };
+		55D2F9651A93F22B00D7C626 /* camera_click@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9501A93F22B00D7C626 /* camera_click@3x.png */; };
+		55D2F9661A93F22B00D7C626 /* camera_close@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9511A93F22B00D7C626 /* camera_close@1x.png */; };
+		55D2F9671A93F22B00D7C626 /* camera_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9521A93F22B00D7C626 /* camera_close@2x.png */; };
+		55D2F9681A93F22B00D7C626 /* camera_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9531A93F22B00D7C626 /* camera_close@3x.png */; };
+		55D2F9691A93F22B00D7C626 /* camera_flash@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9541A93F22B00D7C626 /* camera_flash@1x.png */; };
+		55D2F96A1A93F22B00D7C626 /* camera_flash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9551A93F22B00D7C626 /* camera_flash@2x.png */; };
+		55D2F96B1A93F22B00D7C626 /* camera_flash@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9561A93F22B00D7C626 /* camera_flash@3x.png */; };
+		55D2F96C1A93F22B00D7C626 /* camera_gallery@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9571A93F22B00D7C626 /* camera_gallery@1x.png */; };
+		55D2F96D1A93F22B00D7C626 /* camera_gallery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9581A93F22B00D7C626 /* camera_gallery@2x.png */; };
+		55D2F96E1A93F22B00D7C626 /* camera_gallery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9591A93F22B00D7C626 /* camera_gallery@3x.png */; };
+		55D2F96F1A93F22B00D7C626 /* camera_rotate@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95A1A93F22B00D7C626 /* camera_rotate@1x.png */; };
+		55D2F9701A93F22B00D7C626 /* camera_rotate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95B1A93F22B00D7C626 /* camera_rotate@2x.png */; };
+		55D2F9711A93F22B00D7C626 /* camera_rotate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95C1A93F22B00D7C626 /* camera_rotate@3x.png */; };
+		55D2F9721A93F22B00D7C626 /* camera_switchside@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95D1A93F22B00D7C626 /* camera_switchside@1x.png */; };
+		55D2F9731A93F22B00D7C626 /* camera_switchside@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95E1A93F22B00D7C626 /* camera_switchside@2x.png */; };
+		55D2F9741A93F22B00D7C626 /* camera_switchside@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F95F1A93F22B00D7C626 /* camera_switchside@3x.png */; };
+		55D2F9B71A96804800D7C626 /* SiriusNewPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2F9B51A96804800D7C626 /* SiriusNewPhotoViewController.m */; };
+		55D2F9B81A96804800D7C626 /* SiriusNewPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9B61A96804800D7C626 /* SiriusNewPhotoViewController.xib */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		811B095C1A09503D008B3393 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811B095B1A09503D008B3393 /* ParseUI.framework */; };
 		817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817AD67B196B009E0014C796 /* Bolts.framework */; };
@@ -809,6 +832,30 @@
 		55D2F9441A93ECE400D7C626 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		55D2F9461A93ED0E00D7C626 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		55D2F9481A93ED2B00D7C626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		55D2F94B1A93F22B00D7C626 /* camera_back@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_back@1x.png"; sourceTree = "<group>"; };
+		55D2F94C1A93F22B00D7C626 /* camera_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_back@2x.png"; sourceTree = "<group>"; };
+		55D2F94D1A93F22B00D7C626 /* camera_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_back@3x.png"; sourceTree = "<group>"; };
+		55D2F94E1A93F22B00D7C626 /* camera_click@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_click@1x.png"; sourceTree = "<group>"; };
+		55D2F94F1A93F22B00D7C626 /* camera_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_click@2x.png"; sourceTree = "<group>"; };
+		55D2F9501A93F22B00D7C626 /* camera_click@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_click@3x.png"; sourceTree = "<group>"; };
+		55D2F9511A93F22B00D7C626 /* camera_close@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_close@1x.png"; sourceTree = "<group>"; };
+		55D2F9521A93F22B00D7C626 /* camera_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_close@2x.png"; sourceTree = "<group>"; };
+		55D2F9531A93F22B00D7C626 /* camera_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_close@3x.png"; sourceTree = "<group>"; };
+		55D2F9541A93F22B00D7C626 /* camera_flash@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_flash@1x.png"; sourceTree = "<group>"; };
+		55D2F9551A93F22B00D7C626 /* camera_flash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_flash@2x.png"; sourceTree = "<group>"; };
+		55D2F9561A93F22B00D7C626 /* camera_flash@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_flash@3x.png"; sourceTree = "<group>"; };
+		55D2F9571A93F22B00D7C626 /* camera_gallery@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_gallery@1x.png"; sourceTree = "<group>"; };
+		55D2F9581A93F22B00D7C626 /* camera_gallery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_gallery@2x.png"; sourceTree = "<group>"; };
+		55D2F9591A93F22B00D7C626 /* camera_gallery@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_gallery@3x.png"; sourceTree = "<group>"; };
+		55D2F95A1A93F22B00D7C626 /* camera_rotate@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_rotate@1x.png"; sourceTree = "<group>"; };
+		55D2F95B1A93F22B00D7C626 /* camera_rotate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_rotate@2x.png"; sourceTree = "<group>"; };
+		55D2F95C1A93F22B00D7C626 /* camera_rotate@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_rotate@3x.png"; sourceTree = "<group>"; };
+		55D2F95D1A93F22B00D7C626 /* camera_switchside@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_switchside@1x.png"; sourceTree = "<group>"; };
+		55D2F95E1A93F22B00D7C626 /* camera_switchside@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_switchside@2x.png"; sourceTree = "<group>"; };
+		55D2F95F1A93F22B00D7C626 /* camera_switchside@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_switchside@3x.png"; sourceTree = "<group>"; };
+		55D2F9B41A96804800D7C626 /* SiriusNewPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusNewPhotoViewController.h; sourceTree = SOURCE_ROOT; };
+		55D2F9B51A96804800D7C626 /* SiriusNewPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusNewPhotoViewController.m; sourceTree = SOURCE_ROOT; };
+		55D2F9B61A96804800D7C626 /* SiriusNewPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusNewPhotoViewController.xib; sourceTree = SOURCE_ROOT; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -1011,6 +1058,9 @@
 				55D2F6671A929D4500D7C626 /* DLCImagePickerController */,
 				5554BDA71A89607200B3A408 /* SiriusCameraNavController.h */,
 				5554BDA81A89607200B3A408 /* SiriusCameraNavController.m */,
+				55D2F9B41A96804800D7C626 /* SiriusNewPhotoViewController.h */,
+				55D2F9B51A96804800D7C626 /* SiriusNewPhotoViewController.m */,
+				55D2F9B61A96804800D7C626 /* SiriusNewPhotoViewController.xib */,
 				5554BDA91A89607200B3A408 /* SiriusCameraViewController.h */,
 				5554BDAA1A89607200B3A408 /* SiriusCameraViewController.m */,
 				5554BDAB1A89607200B3A408 /* SiriusCameraViewController.xib */,
@@ -1116,6 +1166,27 @@
 		55D2F6B71A929F4C00D7C626 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				55D2F94B1A93F22B00D7C626 /* camera_back@1x.png */,
+				55D2F94C1A93F22B00D7C626 /* camera_back@2x.png */,
+				55D2F94D1A93F22B00D7C626 /* camera_back@3x.png */,
+				55D2F94E1A93F22B00D7C626 /* camera_click@1x.png */,
+				55D2F94F1A93F22B00D7C626 /* camera_click@2x.png */,
+				55D2F9501A93F22B00D7C626 /* camera_click@3x.png */,
+				55D2F9511A93F22B00D7C626 /* camera_close@1x.png */,
+				55D2F9521A93F22B00D7C626 /* camera_close@2x.png */,
+				55D2F9531A93F22B00D7C626 /* camera_close@3x.png */,
+				55D2F9541A93F22B00D7C626 /* camera_flash@1x.png */,
+				55D2F9551A93F22B00D7C626 /* camera_flash@2x.png */,
+				55D2F9561A93F22B00D7C626 /* camera_flash@3x.png */,
+				55D2F9571A93F22B00D7C626 /* camera_gallery@1x.png */,
+				55D2F9581A93F22B00D7C626 /* camera_gallery@2x.png */,
+				55D2F9591A93F22B00D7C626 /* camera_gallery@3x.png */,
+				55D2F95A1A93F22B00D7C626 /* camera_rotate@1x.png */,
+				55D2F95B1A93F22B00D7C626 /* camera_rotate@2x.png */,
+				55D2F95C1A93F22B00D7C626 /* camera_rotate@3x.png */,
+				55D2F95D1A93F22B00D7C626 /* camera_switchside@1x.png */,
+				55D2F95E1A93F22B00D7C626 /* camera_switchside@2x.png */,
+				55D2F95F1A93F22B00D7C626 /* camera_switchside@3x.png */,
 				55D2F6B81A929F4C00D7C626 /* blur-on.png */,
 				55D2F6B91A929F4C00D7C626 /* blur-on@2x.png */,
 				55D2F6BA1A929F4C00D7C626 /* blur.png */,
@@ -1652,31 +1723,43 @@
 				55D2F6A11A929D7300D7C626 /* 8.jpg in Resources */,
 				55D2F6D91A929F4C00D7C626 /* filter@2x.png in Resources */,
 				55D2F6751A929D5C00D7C626 /* 02.acv in Resources */,
+				55D2F96B1A93F22B00D7C626 /* camera_flash@3x.png in Resources */,
 				55D2F6CF1A929F4C00D7C626 /* blur_off@1x.png in Resources */,
 				55D2F6B51A929EDA00D7C626 /* blackframe.png in Resources */,
+				55D2F9691A93F22B00D7C626 /* camera_flash@1x.png in Resources */,
+				55D2F9621A93F22B00D7C626 /* camera_back@3x.png in Resources */,
+				55D2F96A1A93F22B00D7C626 /* camera_flash@2x.png in Resources */,
 				55D2F69A1A929D7300D7C626 /* 4@2x.jpg in Resources */,
+				55D2F9651A93F22B00D7C626 /* camera_click@3x.png in Resources */,
 				55D2F6731A929D5C00D7C626 /* DLCImagePicker.xib in Resources */,
 				55D2F6941A929D7300D7C626 /* 1@2x.jpg in Resources */,
 				5554BE061A896C0100B3A408 /* MainWindow.xib in Resources */,
 				5554BDF91A89691F00B3A408 /* Default@2x.png in Resources */,
+				55D2F9601A93F22B00D7C626 /* camera_back@1x.png in Resources */,
 				55D2F6D81A929F4C00D7C626 /* filter.png in Resources */,
 				55D2F6921A929D7300D7C626 /* 10.jpg in Resources */,
+				55D2F9731A93F22B00D7C626 /* camera_switchside@2x.png in Resources */,
+				55D2F9701A93F22B00D7C626 /* camera_rotate@2x.png in Resources */,
+				55D2F9741A93F22B00D7C626 /* camera_switchside@3x.png in Resources */,
 				55D2F69E1A929D7300D7C626 /* 6@2x.jpg in Resources */,
 				55D2F6D31A929F4C00D7C626 /* close.png in Resources */,
 				55D2F6761A929D5C00D7C626 /* 06.acv in Resources */,
 				55D2F6771A929D5C00D7C626 /* 17.acv in Resources */,
 				55D2F69B1A929D7300D7C626 /* 5.jpg in Resources */,
 				55D2F6DA1A929F4C00D7C626 /* focus-crosshair.png in Resources */,
+				55D2F9711A93F22B00D7C626 /* camera_rotate@3x.png in Resources */,
 				55D2F6981A929D7300D7C626 /* 3@2x.jpg in Resources */,
 				55D2F6A31A929D7300D7C626 /* 9.jpg in Resources */,
 				55D2F6B61A929EDA00D7C626 /* mask.png in Resources */,
 				55D2F86A1A92A43B00D7C626 /* lookup_amatorka.png in Resources */,
 				55D2F6781A929D5C00D7C626 /* aqua.acv in Resources */,
+				55D2F9641A93F22B00D7C626 /* camera_click@2x.png in Resources */,
 				55D2F8691A92A43B00D7C626 /* lookup.png in Resources */,
 				55D2F6AF1A929D8C00D7C626 /* DLCImagePicker.xib in Resources */,
 				5554BE031A896BA900B3A408 /* InfoPlist.strings in Resources */,
 				55D2F6D71A929F4C00D7C626 /* filter-open@2x.png in Resources */,
 				55D2F6D21A929F4C00D7C626 /* blur_on@2x.png in Resources */,
+				55D2F96F1A93F22B00D7C626 /* camera_rotate@1x.png in Resources */,
 				55D2F6791A929D5C00D7C626 /* crossprocess.acv in Resources */,
 				55D2F69F1A929D7300D7C626 /* 7.jpg in Resources */,
 				5554BDD71A89607200B3A408 /* SiriusCameraViewController.xib in Resources */,
@@ -1696,28 +1779,38 @@
 				55D2F6D11A929F4C00D7C626 /* blur_on@1x.png in Resources */,
 				55D2F6991A929D7300D7C626 /* 4.jpg in Resources */,
 				5554BDF81A89691F00B3A408 /* Default.png in Resources */,
+				55D2F9631A93F22B00D7C626 /* camera_click@1x.png in Resources */,
+				55D2F9671A93F22B00D7C626 /* camera_close@2x.png in Resources */,
 				55D2F86D1A92A43B00D7C626 /* lookup_soft_elegance_2.png in Resources */,
 				55D2F90D1A92A43B00D7C626 /* Info.plist in Resources */,
+				55D2F96D1A93F22B00D7C626 /* camera_gallery@2x.png in Resources */,
 				5554BDFB1A89692D00B3A408 /* Info.plist in Resources */,
+				55D2F9721A93F22B00D7C626 /* camera_switchside@1x.png in Resources */,
 				55D2F6E01A929F5B00D7C626 /* sample1.jpg in Resources */,
 				55D2F6A21A929D7300D7C626 /* 8@2x.jpg in Resources */,
 				55D2F6971A929D7300D7C626 /* 3.jpg in Resources */,
+				55D2F96C1A93F22B00D7C626 /* camera_gallery@1x.png in Resources */,
 				55D2F6D51A929F4C00D7C626 /* filter-close@2x.png in Resources */,
 				5554BDF71A89691F00B3A408 /* Default-568h@2x.png in Resources */,
 				55D2F6961A929D7300D7C626 /* 2@2x.jpg in Resources */,
 				55D2F69D1A929D7300D7C626 /* 6.jpg in Resources */,
 				55D2F6931A929D7300D7C626 /* 10@2x.jpg in Resources */,
+				55D2F9681A93F22B00D7C626 /* camera_close@3x.png in Resources */,
 				5554BDD91A89607200B3A408 /* SiriusFeedViewController.xib in Resources */,
+				55D2F9661A93F22B00D7C626 /* camera_close@1x.png in Resources */,
 				55D2F6951A929D7300D7C626 /* 2.jpg in Resources */,
 				55D2F6CD1A929F4C00D7C626 /* blur.png in Resources */,
 				55D2F67B1A929D5C00D7C626 /* yellow-red.acv in Resources */,
 				5554BDE01A89607200B3A408 /* SiriusProfileViewController.xib in Resources */,
+				55D2F9611A93F22B00D7C626 /* camera_back@2x.png in Resources */,
 				55D2F86C1A92A43B00D7C626 /* lookup_soft_elegance_1.png in Resources */,
 				55D2F6DD1A929F4C00D7C626 /* photo_bar@2x.png in Resources */,
 				55D2F6CB1A929F4C00D7C626 /* blur-on.png in Resources */,
 				55D2F6DB1A929F4C00D7C626 /* focus-crosshair@2x.png in Resources */,
 				5554BDD41A89607200B3A408 /* SiriusActivityViewController.xib in Resources */,
 				55D2F6A01A929D7300D7C626 /* 7@2x.jpg in Resources */,
+				55D2F96E1A93F22B00D7C626 /* camera_gallery@3x.png in Resources */,
+				55D2F9B81A96804800D7C626 /* SiriusNewPhotoViewController.xib in Resources */,
 				55D2F69C1A929D7300D7C626 /* 5@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1753,6 +1846,7 @@
 				55D2F8F01A92A43B00D7C626 /* GPUImageSourceOverBlendFilter.m in Sources */,
 				55D2F8771A92A43B00D7C626 /* GPUImageBilateralFilter.m in Sources */,
 				55D2F9071A92A43B00D7C626 /* GPUImageVignetteFilter.m in Sources */,
+				55D2F9B71A96804800D7C626 /* SiriusNewPhotoViewController.m in Sources */,
 				55D2F89C1A92A43B00D7C626 /* GPUImageFramebufferCache.m in Sources */,
 				55D2F8C81A92A43B00D7C626 /* GPUImageMovie.m in Sources */,
 				55D2F8CD1A92A43B00D7C626 /* GPUImageNormalBlendFilter.m in Sources */,

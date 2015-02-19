@@ -12,11 +12,11 @@
 
 @interface SiriusPhoto : PFObject <PFSubclassing>
 
-@property (strong) SiriusUser *fromUser;
-@property (strong) NSString	  *caption;
-@property (strong) SiriusPet   *ofPet;
-@property (strong) PFFile	  *image;
-@property (strong) PFFile	  *thumbnail;
+@property (strong) NSString* caption;
+@property (strong) SiriusPet* ofPet;
+@property (strong) PFFile* image;
+@property (strong) PFFile* thumbnail;
+@property (strong) SiriusUser* user;
 
 
 @end

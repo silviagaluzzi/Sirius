@@ -12,11 +12,11 @@
 
 @interface SiriusActivity : PFObject<PFSubclassing>
 
-@property (strong) NSString	*type;
-@property (strong) SiriusUser	*fromUser;
-@property (strong) SiriusUser	*toUser;
-@property (strong) NSString	*message;
-@property (strong) SiriusPhoto	*photo;
+@property (strong) NSString*    type;
+@property (strong) SiriusUser*  fromUser;
+@property (strong) SiriusUser*  toUser;
+@property (strong) NSString*    message;
+@property (strong) SiriusPhoto* photo;
 
 
 @end
