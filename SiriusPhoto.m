@@ -10,4 +10,15 @@
 
 @implementation SiriusPhoto
 
+@dynamic caption;
+@dynamic ofPet;
+@dynamic image;
+@dynamic thumbnail;
+@dynamic user;
+
++ (NSString *)parseClassName
+{
+    return @"Photo";
+}
+
 @end

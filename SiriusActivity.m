@@ -10,4 +10,15 @@
 
 @implementation SiriusActivity
 
+@dynamic type;
+@dynamic fromUser;
+@dynamic toUser;
+@dynamic message;
+@dynamic photo;
+
++ (NSString *)parseClassName
+{
+    return @"Activity";
+}
+
 @end

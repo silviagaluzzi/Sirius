@@ -29,6 +29,7 @@
 @property (strong) NSDate 	*createAt;
 @property (strong) NSDate 	*updateAt;
 
++ (NSString *)parseClassName;
 
 
 @end

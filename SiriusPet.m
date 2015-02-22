@@ -10,4 +10,18 @@
 
 @implementation SiriusPet
 
+@dynamic  name;
+@dynamic age;
+@dynamic gender;
+@dynamic breed;
+@dynamic distintiveFeatures;
+@dynamic type;
+@dynamic owner;
+@dynamic picture;
+
++ (NSString *)parseClassName
+{
+    return @"Pet";
+}
+
 @end

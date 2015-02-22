@@ -58,6 +58,13 @@
     // Uncomment this line if you want to enable Crash Reporting
     [ParseCrashReporting enable];
     //
+    
+    // PARSE register
+    [SiriusUser registerSubclass];
+    [SiriusActivity registerSubclass];
+    [SiriusPet registerSubclass];
+    [SiriusPhoto registerSubclass];
+    
     // Uncomment and fill in with your Parse credentials:
     [Parse setApplicationId:PARSE_APPID clientKey:PARSE_CLIENTKEY];
     [[PFInstallation currentInstallation] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

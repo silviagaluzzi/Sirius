@@ -18,5 +18,6 @@
 @property (strong) PFFile* thumbnail;
 @property (strong) SiriusUser* user;
 
++ (NSString *)parseClassName;
 
 @end

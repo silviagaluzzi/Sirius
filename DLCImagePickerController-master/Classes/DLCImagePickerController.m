@@ -472,13 +472,17 @@
             processUpTo = filter;
         }
         
+        [processUpTo useNextFrameForImageCapture];
         [staticPicture processImage];
         
-        UIImage *currentFilteredVideoFrame = [processUpTo imageFromCurrentFramebufferWithOrientation:staticPictureOriginalOrientation]; // imageFromCurrentlyProcessedOutputWithOrientation:staticPictureOriginalOrientation];
+        UIImage *currentFilteredVideoFrame = [processUpTo
+                                              imageFromCurrentFramebufferWithOrientation:staticPictureOriginalOrientation]; // imageFromCurrentlyProcessedOutputWithOrientation:staticPictureOriginalOrientation];
 
         NSDictionary *info = [[NSDictionary alloc] initWithObjectsAndKeys:
                               UIImageJPEGRepresentation(currentFilteredVideoFrame, self.outputJPEGQuality), @"data", nil];
         [self.delegate imagePickerController:self didFinishPickingMediaWithInfo:info];
+        
+
     }
 }
 

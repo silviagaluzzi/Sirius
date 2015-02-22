@@ -20,4 +20,7 @@
 @property (strong) SiriusUser   *owner;
 @property (strong) PFFile       *picture;
 
+
++ (NSString *)parseClassName;
+
 @end

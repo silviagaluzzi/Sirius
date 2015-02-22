@@ -10,6 +10,7 @@
 
 @implementation SiriusUser
 
+
 @dynamic displayName;
 @dynamic profilePictureMedium;
 @dynamic profilePictureSmall;
@@ -27,6 +28,11 @@
 @dynamic residenceCountry;
 @dynamic createAt;
 @dynamic updateAt;
+@dynamic pswConfirm;
 
++ (NSString *)parseClassName
+{
+    return @"User";
+}
 
 @end

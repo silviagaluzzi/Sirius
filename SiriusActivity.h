@@ -19,4 +19,6 @@
 @property (strong) SiriusPhoto* photo;
 
 
++ (NSString *)parseClassName;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "SiriusNewPhotoViewController.h"
 #import "UIImage+ResizeAdditions.h"
-//#import "SVProgressHUD.h"
+#import "SVProgressHUD.h"
 #import "PAPConstants.h"
 #import "PAPCache.h"
 #import <Parse/Parse.h>
@@ -109,7 +109,7 @@
 
 
 - (BOOL)requestPhotoSaveWithImage:(UIImage *)anImage {
-    //[SVProgressHUD showProgress:0 status:@"Saving photo..."];
+    [SVProgressHUD showProgress:0 status:@"Saving photo..."];
     UIImage *resizedImage = [anImage resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(640.0f, 640.0f) interpolationQuality:kCGInterpolationHigh];
     UIImage *thumbnailImage = [anImage thumbnailImage:144.0f transparentBorder:0.0f cornerRadius:10.0f interpolationQuality:kCGInterpolationDefault];
     
@@ -118,7 +118,7 @@
     NSData *thumbnailImageData = UIImageJPEGRepresentation(thumbnailImage, 0.9f);
     
     if (!imageData || !thumbnailImageData) {
-      //  [SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
+        [SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
         return NO;
     }
     
@@ -140,30 +140,30 @@
                     
                     //also the thumbnail was saved. Now it's time to save the Activity
                     [[UIApplication sharedApplication] endBackgroundTask:self.fileUploadBackgroundTaskId];
-                    //[SVProgressHUD dismiss];
+                    [SVProgressHUD dismiss];
                     
                     [self savePhotoActivity];
                     
                 } else {
                     //error
                     [[UIApplication sharedApplication] endBackgroundTask:self.fileUploadBackgroundTaskId];
-                    //[SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
+                    [SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
                 }
                 
             } progressBlock:^(int percentDone) {
                 float progress = percentDone / 100.0f;
-                //[SVProgressHUD showProgress:progress status:@"Saving photo..."];
+                [SVProgressHUD showProgress:progress status:@"Saving photo..."];
             }];
             
             
         } else {
             //error
             [[UIApplication sharedApplication] endBackgroundTask:self.fileUploadBackgroundTaskId];
-            //[SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
+            [SVProgressHUD showErrorWithStatus:@"Unable to save photo!"];
         }
     } progressBlock:^(int percentDone) {
         float progress = percentDone / 100.0f;
-        //[SVProgressHUD showProgress:progress status:@"Saving photo..."];
+        [SVProgressHUD showProgress:progress status:@"Saving photo..."];
     }];
     
     
