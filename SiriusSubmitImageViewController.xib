@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Nexa-Light.otf">
+            <string>NexaLight</string>
+            <string>NexaLight</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiriusSubmitImageViewController">
+            <connections>
+                <outlet property="imageView" destination="Pl3-rs-kTW" id="4QH-1H-dPt"/>
+                <outlet property="kissHeight" destination="TLp-m8-0UI" id="SJm-hB-RHv"/>
+                <outlet property="kissImage" destination="dQa-Vj-Vkd" id="Kn3-3c-cjU"/>
+                <outlet property="kissRight" destination="f61-dh-SqP" id="jqM-EY-Z3T"/>
+                <outlet property="kissTop" destination="Xrx-Oh-qZZ" id="CLJ-Ya-xmS"/>
+                <outlet property="kissWidth" destination="cAB-bm-06s" id="Va1-qW-5y1"/>
+                <outlet property="shareToOvsSwitch" destination="xLH-x7-tp9" id="2vU-8h-ehO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-Me-40e">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="378"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-rs-kTW">
+                            <rect key="frame" x="-19" y="10" width="358" height="358"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Pl3-rs-kTW" secondAttribute="height" multiplier="1:1" id="ymj-A1-1VZ"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OVS_Bacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="dQa-Vj-Vkd">
+                            <rect key="frame" x="220" y="300" width="130" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="85" id="TLp-m8-0UI"/>
+                                <constraint firstAttribute="width" constant="130" id="cAB-bm-06s"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="Pl3-rs-kTW" secondAttribute="centerY" id="8G5-bh-10Q"/>
+                        <constraint firstItem="dQa-Vj-Vkd" firstAttribute="top" secondItem="QXg-Me-40e" secondAttribute="top" constant="300" id="Xrx-Oh-qZZ"/>
+                        <constraint firstAttribute="centerX" secondItem="Pl3-rs-kTW" secondAttribute="centerX" id="cPs-kQ-KDD"/>
+                        <constraint firstAttribute="trailing" secondItem="dQa-Vj-Vkd" secondAttribute="trailing" constant="-30" id="f61-dh-SqP"/>
+                        <constraint firstAttribute="bottom" secondItem="Pl3-rs-kTW" secondAttribute="bottom" constant="10" id="lKK-Ci-56B"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YM-AI-aey">
+                    <rect key="frame" x="0.0" y="378" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pubblica nella gallery del sito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-sH-9pY">
+                            <rect key="frame" x="8" y="14" width="241" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="241" id="VSd-oL-oMD"/>
+                                <constraint firstAttribute="height" constant="21" id="wss-lt-1dy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NexaLight" family="Nexa Light" pointSize="13"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLH-x7-tp9">
+                            <rect key="frame" x="263" y="9" width="51" height="31"/>
+                            <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Jbx-7W-gna"/>
+                        <constraint firstItem="dFq-sH-9pY" firstAttribute="leading" secondItem="0YM-AI-aey" secondAttribute="leadingMargin" id="chk-UT-3g4"/>
+                        <constraint firstAttribute="centerY" secondItem="dFq-sH-9pY" secondAttribute="centerY" id="dEY-jH-ZRF"/>
+                        <constraint firstItem="xLH-x7-tp9" firstAttribute="trailing" secondItem="0YM-AI-aey" secondAttribute="trailingMargin" id="dH7-Xs-0t5"/>
+                        <constraint firstAttribute="centerY" secondItem="xLH-x7-tp9" secondAttribute="centerY" id="wSc-W4-o1q"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDL-d9-H82">
+                    <rect key="frame" x="0.0" y="430" width="320" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="uWb-Vw-s2c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NexaLight" family="Nexa Light" pointSize="15"/>
+                    <state key="normal" title="INVIA">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendButton:" destination="-1" eventType="touchUpInside" id="IAO-7B-Pe8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0YM-AI-aey" firstAttribute="top" secondItem="QXg-Me-40e" secondAttribute="bottom" id="Rz6-BJ-hT5"/>
+                <constraint firstItem="zDL-d9-H82" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XXZ-bL-w7d"/>
+                <constraint firstItem="QXg-Me-40e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Z2k-NP-Apg"/>
+                <constraint firstAttribute="trailing" secondItem="QXg-Me-40e" secondAttribute="trailing" id="eVu-z8-RT1"/>
+                <constraint firstAttribute="trailing" secondItem="zDL-d9-H82" secondAttribute="trailing" id="jGO-b1-Fwg"/>
+                <constraint firstAttribute="trailing" secondItem="0YM-AI-aey" secondAttribute="trailing" id="knP-T3-5hN"/>
+                <constraint firstItem="0YM-AI-aey" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tTq-uT-P2V"/>
+                <constraint firstAttribute="bottom" secondItem="zDL-d9-H82" secondAttribute="bottom" id="vXS-Zb-L35"/>
+                <constraint firstItem="QXg-Me-40e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wjD-2T-IIh"/>
+                <constraint firstItem="zDL-d9-H82" firstAttribute="top" secondItem="0YM-AI-aey" secondAttribute="bottom" constant="2" id="ysh-Dv-Ztc"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="390" y="260"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="OVS_Bacio.png" width="503" height="420"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

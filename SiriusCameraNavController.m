@@ -8,6 +8,8 @@
 
 #import "SiriusCameraNavController.h"
 #import "SiriusNewPhotoViewController.h"
+#import "SiriusChooseFrame.h"
+#import "SiriusSubmitImageViewController.h"
 
 @interface SiriusCameraNavController ()
 
@@ -48,11 +50,26 @@
     
     self.photo = [UIImage imageWithData:[info objectForKey:@"data"]];
     
-    SiriusNewPhotoViewController* newPhoto = [[SiriusNewPhotoViewController alloc] initWithNibName:@"SiriusNewPhotoViewController" bundle:nil photo:self.photo];
+/*    SiriusNewPhotoViewController* newPhoto = [[SiriusNewPhotoViewController alloc] initWithNibName:@"SiriusNewPhotoViewController" bundle:nil photo:self.photo];
     
     [self pushViewController:newPhoto animated:YES];
+  */
+    //[self dismissViewControllerAnimated:YES completion:nil];
+
+    SiriusChooseFrame *chooseFrame = [[SiriusChooseFrame alloc] initWithNibName:@"SiriusChooseFrame" bundle:nil photo:self.photo];
+    chooseFrame.delegate = self;
+
+    [self pushViewController:chooseFrame animated:YES];
+   // [self presentViewController:chooseFrame animated:YES completion:nil];
+
 }
 
+-(void) completedCompositionofImage:(UIImage *)image {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
+    
+    SiriusSubmitImageViewController *submitPhoto = [[SiriusSubmitImageViewController alloc] initWithNibName:@"SiriusSubmitImageViewController" bundle:nil photo:image];
+    [self.navigationController pushViewController:submitPhoto animated:YES];
+}
 
 
 @end

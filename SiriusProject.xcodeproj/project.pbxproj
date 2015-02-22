@@ -134,6 +134,15 @@
 		55CF41231A9A201300BF9939 /* purple-green.acv in Resources */ = {isa = PBXBuildFile; fileRef = 55CF411B1A9A201300BF9939 /* purple-green.acv */; };
 		55CF41241A9A201300BF9939 /* yellow-red.acv in Resources */ = {isa = PBXBuildFile; fileRef = 55CF411C1A9A201300BF9939 /* yellow-red.acv */; };
 		55CF41261A9A21B900BF9939 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CF41251A9A21B900BF9939 /* AssetsLibrary.framework */; };
+		55CF41481A9A2FBF00BF9939 /* skin01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CF412A1A9A2FBF00BF9939 /* skin01.png */; };
+		55CF41491A9A2FBF00BF9939 /* skin02.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CF412B1A9A2FBF00BF9939 /* skin02.png */; };
+		55CF414A1A9A2FBF00BF9939 /* skin03.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CF412C1A9A2FBF00BF9939 /* skin03.png */; };
+		55CF416C1A9A304C00BF9939 /* SiriusChooseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF41671A9A304C00BF9939 /* SiriusChooseFrame.m */; };
+		55CF416D1A9A304C00BF9939 /* SiriusChooseFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CF41681A9A304C00BF9939 /* SiriusChooseFrame.xib */; };
+		55CF416E1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF416A1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.m */; };
+		55CF416F1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CF416B1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib */; };
+		55CF41731A9A376E00BF9939 /* SiriusSubmitImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CF41711A9A376E00BF9939 /* SiriusSubmitImageViewController.m */; };
+		55CF41741A9A376E00BF9939 /* SiriusSubmitImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55CF41721A9A376E00BF9939 /* SiriusSubmitImageViewController.xib */; };
 		55D2F8691A92A43B00D7C626 /* lookup.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F7041A92A43A00D7C626 /* lookup.png */; };
 		55D2F86A1A92A43B00D7C626 /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F7051A92A43A00D7C626 /* lookup_amatorka.png */; };
 		55D2F86B1A92A43B00D7C626 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F7061A92A43A00D7C626 /* lookup_miss_etikate.png */; };
@@ -513,6 +522,18 @@
 		55CF411B1A9A201300BF9939 /* purple-green.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "purple-green.acv"; sourceTree = "<group>"; };
 		55CF411C1A9A201300BF9939 /* yellow-red.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "yellow-red.acv"; sourceTree = "<group>"; };
 		55CF41251A9A21B900BF9939 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		55CF412A1A9A2FBF00BF9939 /* skin01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skin01.png; sourceTree = SOURCE_ROOT; };
+		55CF412B1A9A2FBF00BF9939 /* skin02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skin02.png; sourceTree = SOURCE_ROOT; };
+		55CF412C1A9A2FBF00BF9939 /* skin03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skin03.png; sourceTree = SOURCE_ROOT; };
+		55CF41661A9A304C00BF9939 /* SiriusChooseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusChooseFrame.h; sourceTree = SOURCE_ROOT; };
+		55CF41671A9A304C00BF9939 /* SiriusChooseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusChooseFrame.m; sourceTree = SOURCE_ROOT; };
+		55CF41681A9A304C00BF9939 /* SiriusChooseFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusChooseFrame.xib; sourceTree = SOURCE_ROOT; };
+		55CF41691A9A304C00BF9939 /* SiriusFrameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusFrameCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		55CF416A1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusFrameCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		55CF416B1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusFrameCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		55CF41701A9A376E00BF9939 /* SiriusSubmitImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriusSubmitImageViewController.h; sourceTree = SOURCE_ROOT; };
+		55CF41711A9A376E00BF9939 /* SiriusSubmitImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusSubmitImageViewController.m; sourceTree = SOURCE_ROOT; };
+		55CF41721A9A376E00BF9939 /* SiriusSubmitImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusSubmitImageViewController.xib; sourceTree = SOURCE_ROOT; };
 		55D2F6FD1A92A43A00D7C626 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GPUImage.xcodeproj; sourceTree = "<group>"; };
 		55D2F7041A92A43A00D7C626 /* lookup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup.png; sourceTree = "<group>"; };
 		55D2F7051A92A43A00D7C626 /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
@@ -1234,9 +1255,37 @@
 			path = Filters;
 			sourceTree = "<group>";
 		};
+		55CF41281A9A2E1B00BF9939 /* Frames */ = {
+			isa = PBXGroup;
+			children = (
+				55CF41701A9A376E00BF9939 /* SiriusSubmitImageViewController.h */,
+				55CF41711A9A376E00BF9939 /* SiriusSubmitImageViewController.m */,
+				55CF41721A9A376E00BF9939 /* SiriusSubmitImageViewController.xib */,
+				55CF41661A9A304C00BF9939 /* SiriusChooseFrame.h */,
+				55CF41671A9A304C00BF9939 /* SiriusChooseFrame.m */,
+				55CF41681A9A304C00BF9939 /* SiriusChooseFrame.xib */,
+				55CF41691A9A304C00BF9939 /* SiriusFrameCollectionViewCell.h */,
+				55CF416A1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.m */,
+				55CF416B1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib */,
+				55CF41291A9A2E2400BF9939 /* Images */,
+			);
+			name = Frames;
+			sourceTree = "<group>";
+		};
+		55CF41291A9A2E2400BF9939 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55CF412A1A9A2FBF00BF9939 /* skin01.png */,
+				55CF412B1A9A2FBF00BF9939 /* skin02.png */,
+				55CF412C1A9A2FBF00BF9939 /* skin03.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		55D2F6621A92991D00D7C626 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				55CF41281A9A2E1B00BF9939 /* Frames */,
 				55CF408E1A9A1E8100BF9939 /* DLCImagePickerController */,
 				5554BDA71A89607200B3A408 /* SiriusCameraNavController.h */,
 				5554BDA81A89607200B3A408 /* SiriusCameraNavController.m */,
@@ -1754,6 +1803,7 @@
 			files = (
 				55CF40EC1A9A1FFD00BF9939 /* 9.jpg in Resources */,
 				55CF41121A9A1FFD00BF9939 /* photo_bar@2x.png in Resources */,
+				55CF416D1A9A304C00BF9939 /* SiriusChooseFrame.xib in Resources */,
 				55CF40E61A9A1FFD00BF9939 /* 6.jpg in Resources */,
 				55CF40ED1A9A1FFD00BF9939 /* 9@2x.jpg in Resources */,
 				5554BE061A896C0100B3A408 /* MainWindow.xib in Resources */,
@@ -1820,6 +1870,7 @@
 				5554BDE01A89607200B3A408 /* SiriusProfileViewController.xib in Resources */,
 				55CF40F21A9A1FFD00BF9939 /* blur-on@2x.png in Resources */,
 				55CF41001A9A1FFD00BF9939 /* filter-open@2x.png in Resources */,
+				55CF416F1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib in Resources */,
 				55CF40F31A9A1FFD00BF9939 /* blur.png in Resources */,
 				55D2F86C1A92A43B00D7C626 /* lookup_soft_elegance_1.png in Resources */,
 				55CF40EF1A9A1FFD00BF9939 /* mask.png in Resources */,
@@ -1831,10 +1882,14 @@
 				55CF41241A9A201300BF9939 /* yellow-red.acv in Resources */,
 				55CF41061A9A1FFD00BF9939 /* flash-off@2x.png in Resources */,
 				5554BDD41A89607200B3A408 /* SiriusActivityViewController.xib in Resources */,
+				55CF41481A9A2FBF00BF9939 /* skin01.png in Resources */,
 				55CF40E41A9A1FFD00BF9939 /* 5.jpg in Resources */,
+				55CF41741A9A376E00BF9939 /* SiriusSubmitImageViewController.xib in Resources */,
 				55CF40F71A9A1FFD00BF9939 /* camera-icon.png in Resources */,
+				55CF41491A9A2FBF00BF9939 /* skin02.png in Resources */,
 				55CF41081A9A1FFD00BF9939 /* flash@2x.png in Resources */,
 				55CF40F01A9A1FFD00BF9939 /* sample1.jpg in Resources */,
+				55CF414A1A9A2FBF00BF9939 /* skin03.png in Resources */,
 				55CF40FA1A9A1FFD00BF9939 /* close@2x.png in Resources */,
 				55D2F9B81A96804800D7C626 /* SiriusNewPhotoViewController.xib in Resources */,
 			);
@@ -1948,6 +2003,7 @@
 				5554BDD81A89607200B3A408 /* SiriusFeedViewController.m in Sources */,
 				55D2F8CF1A92A43B00D7C626 /* GPUImageOpeningFilter.m in Sources */,
 				55D2F8EF1A92A43B00D7C626 /* GPUImageSolidColorGenerator.m in Sources */,
+				55CF41731A9A376E00BF9939 /* SiriusSubmitImageViewController.m in Sources */,
 				55D2F8F71A92A43B00D7C626 /* GPUImageTextureOutput.m in Sources */,
 				55D2F88C1A92A43B00D7C626 /* GPUImageDifferenceBlendFilter.m in Sources */,
 				55D2F8F51A92A43B00D7C626 /* GPUImageSwirlFilter.m in Sources */,
@@ -1985,6 +2041,7 @@
 				55D2F8961A92A43B00D7C626 /* GPUImageFalseColorFilter.m in Sources */,
 				5554BDDF1A89607200B3A408 /* SiriusProfileViewController.m in Sources */,
 				55D2F87F1A92A43B00D7C626 /* GPUImageChromaKeyFilter.m in Sources */,
+				55CF416E1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.m in Sources */,
 				55D2F9091A92A43B00D7C626 /* GPUImageWeakPixelInclusionFilter.m in Sources */,
 				55D2F8B21A92A43B00D7C626 /* GPUImageKuwaharaFilter.m in Sources */,
 				55D2F8B01A92A43B00D7C626 /* GPUImageiOSBlurFilter.m in Sources */,
@@ -2058,6 +2115,7 @@
 				55D2F8A51A92A43B00D7C626 /* GPUImageHarrisCornerDetectionFilter.m in Sources */,
 				55D2F8B61A92A43B00D7C626 /* GPUImageLevelsFilter.m in Sources */,
 				5554BDCF1A89607200B3A408 /* PAPConstants.m in Sources */,
+				55CF416C1A9A304C00BF9939 /* SiriusChooseFrame.m in Sources */,
 				55D2F8A71A92A43B00D7C626 /* GPUImageHighlightShadowFilter.m in Sources */,
 				55D2F8DA1A92A43B00D7C626 /* GPUImagePosterizeFilter.m in Sources */,
 				5554BDD21A89607200B3A408 /* SiriusActivity.m in Sources */,
