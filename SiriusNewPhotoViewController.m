@@ -50,6 +50,7 @@
     self.navigationItem.rightBarButtonItem = savePhoto;
     
     
+/*  TODO: we will set button when we will have an layout
     UIButton *buttonBack =  [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonBack setFrame:CGRectMake(0, 0, 50, 50)];
     [buttonBack setImageEdgeInsets:UIEdgeInsetsMake(-10, 0, 0, 0)];
@@ -57,7 +58,20 @@
     [buttonBack addTarget:self action:@selector(doCancel:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonBack];
+*/
     
+    CGPoint imageCenter = self.imageView.center;
+    self.imageView.frame = CGRectMake(self.imageView.frame.origin.x,
+                                      self.imageView.frame.origin.y,
+                                      120,
+                                      120);
+    self.imageView.center = CGPointMake(imageCenter.x, imageCenter.y - 20);
+    
+    self.comment.frame = CGRectMake(self.comment.frame.origin.x,
+                                    self.comment.frame.origin.y-40,
+                                    self.comment.frame.size.width,
+                                    self.comment.frame.size.height-40);
+
     self.imageView.image = self.photo;
     
 }

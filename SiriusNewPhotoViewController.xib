@@ -9,7 +9,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiriusNewPhotoViewController">
             <connections>
                 <outlet property="comment" destination="fTE-Wz-WgQ" id="a4p-I8-NgM"/>
-                <outlet property="imageVIew" destination="e12-e2-Zak" id="iVd-cn-8ra"/>
                 <outlet property="imageView" destination="e12-e2-Zak" id="PKK-GA-hk6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

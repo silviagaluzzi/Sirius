@@ -1,6 +1,7 @@
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
-@interface SiriusViewController : UIViewController
+@interface SiriusViewController : GAITrackedViewController
 
 @end

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DLCImagePickerController">
@@ -173,7 +174,7 @@
                                 <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="46"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35">
                             <rect key="frame" x="247" y="48" width="65" height="37"/>
                             <color key="backgroundColor" red="0.078732638889999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -189,7 +190,7 @@
                                 <action selector="toggleFilters:" destination="-1" eventType="touchUpInside" id="68"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80">
                             <rect key="frame" x="0.0" y="52" width="79" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <state key="normal" title="Retake">
@@ -206,10 +207,15 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="32" firstAttribute="leading" secondItem="80" secondAttribute="trailing" constant="24" id="57B-cE-h2F"/>
                         <constraint firstAttribute="centerY" secondItem="80" secondAttribute="centerY" id="Cd2-xK-cFW"/>
+                        <constraint firstItem="35" firstAttribute="leading" secondItem="32" secondAttribute="trailing" constant="30" id="DAJ-vL-vhb"/>
                         <constraint firstAttribute="centerY" secondItem="32" secondAttribute="centerY" id="HWr-Ps-2sl"/>
+                        <constraint firstItem="80" firstAttribute="leading" secondItem="31" secondAttribute="leading" id="dJB-P6-Fy9"/>
                         <constraint firstAttribute="centerY" secondItem="35" secondAttribute="centerY" id="mbh-0a-bfo"/>
                         <constraint firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="uxp-zY-S4x"/>
+                        <constraint firstItem="35" firstAttribute="top" secondItem="31" secondAttribute="top" constant="48" id="vpO-xg-Erg"/>
+                        <constraint firstItem="35" firstAttribute="trailing" secondItem="31" secondAttribute="trailingMargin" id="zdG-01-6Uc"/>
                     </constraints>
                 </view>
             </subviews>
