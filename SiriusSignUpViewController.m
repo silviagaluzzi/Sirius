@@ -33,6 +33,7 @@ BOOL *firstviewDidLayoutSubviews;
     self.emailAsUsername = YES;
     firstviewDidLayoutSubviews = YES;
     
+    
 }
 
 -(void) viewDidLayoutSubviews {
@@ -87,6 +88,19 @@ BOOL *firstviewDidLayoutSubviews;
     self.birthDate.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.birthDate.placeholder = NSLocalizedString(@"Birth Date", @"Birth Date");
     self.birthDate.returnKeyType = UIReturnKeyDone;
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [datePicker addTarget:self action:@selector(updateBirthDate:) forControlEvents:UIControlEventValueChanged];
+    //TODO:inizializzare con la data del txt se presente altrimenti default
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:1980];
+    [components setMonth:1];
+    [components setDay:1];
+    NSDate* initDate =  [calendar dateFromComponents:components];
+    [datePicker setDate:(initDate)];
+    
+    [self.birthDate setInputView:datePicker];
     [self.signUpView addSubview:self.birthDate];
     
     bFrame	= self.birthDate.frame;
@@ -102,6 +116,11 @@ BOOL *firstviewDidLayoutSubviews;
     self.gender.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.gender.placeholder = NSLocalizedString(@"Gender", @"Gender");
     self.gender.returnKeyType = UIReturnKeyDone;
+    UIPickerView* picGender = [[UIPickerView alloc] initWithFrame:bFrame];
+    picGender.delegate = self;
+    picGender.showsSelectionIndicator = YES;
+
+    [self.gender setInputView:picGender];
     [self.signUpView addSubview:self.gender];
     
     bFrame	= self.gender.frame;
@@ -145,6 +164,46 @@ BOOL *firstviewDidLayoutSubviews;
         self.pswConfirm.text = user.pswConfirm;
     }
     
+}
+
+- (void) updateBirthDate:(UIDatePicker *)picker{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    self.birthDate.text = [dateFormatter stringFromDate:picker.date];
+    
+}
+
+#pragma mark - UIPickerDelegate
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    NSUInteger numRows = 2;
+    
+    return numRows;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    NSString* ret = @"";
+    if (row == 0) {
+        ret = NSLocalizedString(@"SIGN_UP_FEMALE", @"SIGN_UP_FEMALE");
+    }else{
+        ret = NSLocalizedString(@"SIGN_UP_MALE", @"SIGN_UP_MALE");
+    }
+    
+    return ret;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    NSArray *pickerData = [[NSArray alloc] initWithObjects:@"female", @"male", nil];
+    
+    self.gender.text = [pickerData objectAtIndex:row];
+   
+                        
 }
 
 @end

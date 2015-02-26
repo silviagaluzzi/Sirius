@@ -13,5 +13,7 @@
 "GENDER_EMPTY" = "Please insert your gender";
 "PSW_CONFIRM_EMPTY" = "Please insert password confim";
 "Please enter a username." = "Please insert your email";
+"SIGN_UP_FEMALE" = "Female";
+"SIGN_UP_MALE" = "Male";
 
 

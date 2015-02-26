@@ -8,7 +8,7 @@
 
 #import <ParseUI/ParseUI.h>
 
-@interface SiriusSignUpViewController : PFSignUpViewController<PFSignUpViewControllerDelegate>
+@interface SiriusSignUpViewController : PFSignUpViewController<PFSignUpViewControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic,strong) PFTextField *firstName;
 @property (nonatomic,strong) PFTextField *lastName;
