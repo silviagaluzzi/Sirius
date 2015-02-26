@@ -133,4 +133,14 @@
     
 }
 
+#pragma mark Login
+-(BOOL)isFieldEmpty:(UITextField *)field
+{
+    if (field.text == nil || [[field.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 @end

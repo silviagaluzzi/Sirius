@@ -17,6 +17,7 @@
 #import "MainController.h"
 #import "SiriusCameraNavController.h"
 #import "DLCImagePickerController.h"
+#import "SVProgressHUD.h"
 
 
 
@@ -187,32 +188,41 @@
 }
 
 #pragma mark - PFSignUpViewControllerDelegate
-- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+- (BOOL)signUpViewController:(SiriusSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
     
     
-    //TODO: other required?! control PSW and email
-/*    BOOL informationComplete = YES;
-    for (id key in info) {
-        NSString *field = [info objectForKey:key];
-        if (![key isEqualToString:@"email"]) {
-            if (!field || field.length == 0) {
-                informationComplete = NO;
-                break;
-            }
-        }
+    if ([[MainController sharedController] isFieldEmpty: signUpController.firstName]) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SIGN_UP_ERROR", nil) message:NSLocalizedString(@"FIRST_NAME_EMPTY", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+
+        return NO;
     }
-    
-    if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+    if ([[MainController sharedController] isFieldEmpty: signUpController.lastName]) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SIGN_UP_ERROR", nil) message:NSLocalizedString(@"LAST_NAME_EMPTY", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+
+        return NO;
     }
-    
-    return informationComplete;
- */
-    
+    if ([[MainController sharedController] isFieldEmpty: signUpController.birthDate]) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SIGN_UP_ERROR", nil) message:NSLocalizedString(@"BIRTH_DATE_EMPTY", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+
+        return NO;
+    }
+    if ([[MainController sharedController] isFieldEmpty: signUpController.gender]) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SIGN_UP_ERROR", nil) message:NSLocalizedString(@"GENDER_EMPTY", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+        
+        return NO;
+    }
+    if ([[MainController sharedController] isFieldEmpty: signUpController.pswConfirm]) {
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SIGN_UP_ERROR", nil) message:NSLocalizedString(@"PSW_CONFIRM_EMPTY", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+
+        return NO;
+    }
+
     return YES;
+    
 }
 
 - (void) signUpViewController:(SiriusSignUpViewController *)signUpController didSignUpUser:(SiriusUser *)user {
+    
     
     //Sirius additional sigup fields
     NSString* firstName = signUpController.firstName.text;

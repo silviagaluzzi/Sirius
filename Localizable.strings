@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  SiriusProject
+
+  Created by Silvia Galuzzi on 25/02/15.
+
+*/
+
+"SIGN_UP_ERROR" = "Sign up error";
+"FIRST_NAME_EMPTY" = "Please enter your first name";
+"LAST_NAME_EMPTY" = "Please enter your last name";
+"BIRTH_DATE_EMPTY" = "Please insert your birth date";
+"GENDER_EMPTY" = "Please insert your gender";
+"PSW_CONFIRM_EMPTY" = "Please insert password confim";
+"Please enter a username." = "Please insert your email";
+
+

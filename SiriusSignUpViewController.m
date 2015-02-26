@@ -145,9 +145,6 @@ BOOL *firstviewDidLayoutSubviews;
         self.pswConfirm.text = user.pswConfirm;
     }
     
-    
-    
-    
 }
 
 @end

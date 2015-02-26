@@ -35,5 +35,7 @@
 
 - (void) signUpFields:(NSMutableArray*) arrayFields;
 
+-(BOOL)isFieldEmpty:(UITextField *)field;
+
 
 @end
