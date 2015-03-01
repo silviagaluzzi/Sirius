@@ -10,6 +10,9 @@
 #import "PAPUtility.h"
 #import "PAPCache.h"
 #import "PAPConstants.h"
+#import "SiriusSignUpViewController.h"
+#import "Notifications.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 
 @implementation MainController
@@ -52,12 +55,54 @@
     
 }
 
+- (void)logOut {
+    
+    
+    // clear cache
+    [[PAPCache sharedCache] clear];
+    
+    // clear NSUserDefaults
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kPAPUserDefaultsCacheFacebookFriendsKey];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kPAPUserDefaultsActivityFeedViewControllerLastRefreshKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // Unsubscribe from push notifications by removing the user association from the current installation.
+    [[PFInstallation currentInstallation] removeObjectForKey:kPAPInstallationUserKey];
+    [[PFInstallation currentInstallation] saveInBackground];
+    
+    // Clear all caches
+    [PFQuery clearAllCachedResults];
+    
+    
+    // Clear Push Notifications channel
+    PFInstallation	*installation	= [PFInstallation currentInstallation];
+    NSString		*channelName	= [NSString stringWithFormat: @"user%@", [[SiriusUser currentUser] objectId]];
+    
+    [PFPush unsubscribeFromChannelInBackground: @""];
+    if (installation.channels.count) {
+        [PFPush unsubscribeFromChannelInBackground: channelName
+                                             block: ^(BOOL succeeded, NSError *error) {
+                                                 // We don't care about errors here, log out anyway
+                                                 [SiriusUser logOut];
+                                                 
+                                                 //TODO: qui mosta login
+                                                 //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
+                                             }];
+    } else {
+        [SiriusUser logOut];
+        //TODO: qui mosta login
+        //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
+    }
+    
+    
+}
+
 - (void)refreshCurrentUserData {
     [[SiriusUser currentUser] refreshInBackgroundWithTarget:self selector:@selector(refreshCurrentUserCallbackWithResult:error:)];
 }
 
 - (void)refreshCurrentUserCallbackWithResult:(PFObject *)refreshedObject error:(NSError *)error {
-/*
+
     // A kPFErrorObjectNotFound error on currentUser refresh signals a deleted user
     if (error && error.code == kPFErrorObjectNotFound) {
         NSLog(@"User does not exist.");
@@ -70,7 +115,7 @@
         // User has Facebook ID.
         // refresh profile image
         NSString *facebookId = [SiriusUser currentUser].facebookId;
-        [self downLoadUserPicture:facebookId];
+        //[self downLoadUserPicture:facebookId];
         
         // refresh Facebook friends on each launch
         [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
@@ -90,7 +135,7 @@
             }
         }];
     }
- */
+ 
 }
 
 - (BOOL)isValidUser:(SiriusUser *)user {
@@ -104,31 +149,55 @@
 - (void)facebookRequestDidLoad:(id)result {
     
     SiriusUser *user = [SiriusUser currentUser];
-    
+    NSMutableDictionary  *fbUserData = [[NSMutableDictionary alloc] init];
+
     if (user) {
+        NSString* firstName = @"";
         if ([result objectForKey:@"first_name"] != nil){
-            [user setObject:[result objectForKey:@"first_name"] forKey:@"firstName"];
-
+            firstName = [result objectForKey:@"first_name"];
+            [user setObject:firstName forKey:@"firstName"];
+            [fbUserData setObject:firstName forKey:@"firstName"];
         }
+        NSString* lastName = @"";
         if ([result objectForKey:@"last_name"] != nil){
-            [user setObject:[result objectForKey:@"last_name"] forKey:@"lastName"];
+            lastName = [result objectForKey:@"last_name"];
+            [user setObject:lastName forKey:@"lastName"];
+            [fbUserData setObject:lastName forKey:@"lastName"];
         }
+        NSString* gender = @"";
         if ([result objectForKey:@"gender"] != nil){
-
-            [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
+            gender = [result objectForKey:@"gender"];
+            [user setObject:gender forKey:@"gender"];
+            [fbUserData setObject:gender forKey:@"gender"];
         }
-        if ([result objectForKey:@"user_birthday"] != nil){
-            
-            [user setObject:[result objectForKey:@"user_birthday"] forKey:@"birthDate"];
+        
+        NSString* userBirthday = @"";
+        if ([result objectForKey:@"birthday"] != nil){
+            userBirthday = [result objectForKey:@"birthday"];
+            [user setObject:userBirthday forKey:@"userBirthday"];
+            [fbUserData setObject:userBirthday forKey:@"userBirthday"];
         }
+    
+        NSString* email = @"";
         if ([result objectForKey:@"email"] != nil){
-
-            [user setObject:[result objectForKey:@"email"] forKey:@"email"];
+            email = [result objectForKey:@"email"];
+            [user setObject:email forKey:@"email"];
+            [fbUserData setObject:email forKey:@"email"];
         }
+        
+        NSString* facebookID = @"";
+        if ([result objectForKey:@"id"] != nil){
+            facebookID = [result objectForKey:@"id"];
+            [user setObject:facebookID forKey:@"facebookId"];
+            [fbUserData setObject:facebookID forKey:@"facebookId"];
+        }
+        
+        self.userDataFromFB = fbUserData;
 
         [user save];
         
-        //qui devi aprire sigup
+        [self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWSIGUP];
+        
     }
     
 }
@@ -142,5 +211,7 @@
     
     return NO;
 }
+
+
 
 @end

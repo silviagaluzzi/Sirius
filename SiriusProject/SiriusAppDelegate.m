@@ -45,8 +45,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [MainController sharedController].dictFields = nil;
-    [MainController sharedController].dictFields = [[NSMutableDictionary alloc] init];
+//    [MainController sharedController].dictFields = nil;
+//    [MainController sharedController].dictFields = [[NSMutableDictionary alloc] init];
+    [MainController sharedController].userDataFromFB = nil;
+    [MainController sharedController].userDataFromFB = [[NSMutableDictionary alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

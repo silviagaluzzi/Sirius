@@ -33,7 +33,6 @@ BOOL *firstviewDidLayoutSubviews;
     self.emailAsUsername = YES;
     firstviewDidLayoutSubviews = YES;
     
-    
 }
 
 -(void) viewDidLayoutSubviews {
@@ -54,12 +53,11 @@ BOOL *firstviewDidLayoutSubviews;
         [self.firstName setFrame:bFrame];
     }
     self.firstName.autocorrectionType = UITextAutocorrectionTypeNo;
-    self.firstName.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.firstName.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
     self.firstName.placeholder = NSLocalizedString(@"First Name", @"First Name");
     self.firstName.returnKeyType = UIReturnKeyDone;
     [self.signUpView addSubview:self.firstName];
-    [[MainController sharedController].dictFields setObject:self.firstName.text forKey:@"firstName"];
-    
+//    [[MainController sharedController].dictFields setObject:self.firstName.text forKey:@"firstName"];
     bFrame	= self.firstName.frame;
     bFrame.origin.y = bFrame.origin.y + bFrame.size.height + 10;
     
@@ -70,7 +68,7 @@ BOOL *firstviewDidLayoutSubviews;
         [self.lastName setFrame:bFrame];
     }
     self.lastName.autocorrectionType = UITextAutocorrectionTypeNo;
-    self.lastName.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.lastName.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
     self.lastName.placeholder = NSLocalizedString(@"Last Name", @"Last Name");
     self.lastName.returnKeyType = UIReturnKeyDone;
     [self.signUpView addSubview:self.lastName];
@@ -86,12 +84,12 @@ BOOL *firstviewDidLayoutSubviews;
     }
     self.birthDate.autocorrectionType = UITextAutocorrectionTypeNo;
     self.birthDate.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    //self.birthDate.text = @"01/01/1980";
     self.birthDate.placeholder = NSLocalizedString(@"Birth Date", @"Birth Date");
     self.birthDate.returnKeyType = UIReturnKeyDone;
     UIDatePicker *datePicker = [[UIDatePicker alloc]init];
     datePicker.datePickerMode = UIDatePickerModeDate;
     [datePicker addTarget:self action:@selector(updateBirthDate:) forControlEvents:UIControlEventValueChanged];
-    //TODO:inizializzare con la data del txt se presente altrimenti default
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     [components setYear:1980];
@@ -113,7 +111,7 @@ BOOL *firstviewDidLayoutSubviews;
         [self.gender setFrame:bFrame];
     }
     self.gender.autocorrectionType = UITextAutocorrectionTypeNo;
-    self.gender.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.gender.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
     self.gender.placeholder = NSLocalizedString(@"Gender", @"Gender");
     self.gender.returnKeyType = UIReturnKeyDone;
     UIPickerView* picGender = [[UIPickerView alloc] initWithFrame:bFrame];
@@ -152,17 +150,43 @@ BOOL *firstviewDidLayoutSubviews;
     bFrame.origin.y = bFrame.origin.y + bFrame.size.height + 10;
     [self.signUpView.signUpButton setFrame:bFrame];
     
-    SiriusUser *user = [SiriusUser currentUser];
+    //if is access with FB set fields from FB
+    if ([MainController sharedController].userDataFromFB != nil) {
+        NSString *firstName = [[MainController sharedController].userDataFromFB objectForKey:@"firstName"];
+        if (firstName != nil) {
+            self.firstName.text = [[MainController sharedController].userDataFromFB objectForKey:@"firstName"];
+        }
+        NSString *lastName = [[MainController sharedController].userDataFromFB objectForKey:@"lastName"];
+        if (lastName != nil) {
+            self.lastName.text = [[MainController sharedController].userDataFromFB objectForKey:@"lastName"];
+        }
+        NSString *userBirthday = [[MainController sharedController].userDataFromFB objectForKey:@"userBirthday"];
+        if (userBirthday != nil) {
+            self.birthDate.text = [[MainController sharedController].userDataFromFB objectForKey:@"userBirthday"];
+        }
+        NSString *gender = [[MainController sharedController].userDataFromFB objectForKey:@"gender"];
+        if (gender != nil) {
+            self.gender.text = [[MainController sharedController].userDataFromFB objectForKey:@"gender"];
+        }
+        NSString *email = [[MainController sharedController].userDataFromFB objectForKey:@"email"];
+        if (email != nil) {
+            self.signUpView.usernameField.text = [[MainController sharedController].userDataFromFB objectForKey:@"email"];
+        }
+        
+    }
     
+
+    /*SiriusUser *user = [SiriusUser currentUser];
     if (user) {
         self.firstName.text = user.firstName;
         self.lastName.text = user.lastName;
-        //birthDate.text = user.birthDate;
+        //self.birthDate.text = user.birthDate;
         self.gender.text = user.gender;
         self.signUpView.usernameField.text = user.email;
         self.signUpView.passwordField.text = user.password;
         self.pswConfirm.text = user.pswConfirm;
     }
+    */
     
 }
 
@@ -199,7 +223,7 @@ BOOL *firstviewDidLayoutSubviews;
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    NSArray *pickerData = [[NSArray alloc] initWithObjects:@"female", @"male", nil];
+    NSArray *pickerData = [[NSArray alloc] initWithObjects:@"FEMALE", @"MALE", nil];
     
     self.gender.text = [pickerData objectAtIndex:row];
    

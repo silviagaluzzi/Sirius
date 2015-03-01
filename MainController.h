@@ -14,7 +14,8 @@
 + (MainController *)sharedController;
 
 @property (nonatomic, readonly) int networkStatus;
-@property (nonatomic, strong) NSMutableDictionary* dictFields;
+//@property (nonatomic, strong) NSMutableDictionary* dictFields;
+@property (nonatomic, strong) NSDictionary *userDataFromFB;
 
 //- (void)monitorReachability;
 //- (BOOL)isNetworkReachable;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Silvia Galuzzi. All rights reserved.
 //
 
-#define NOTIFICATIONS_AUTH_SHOWLOGIN @"SiriusAuthShowLogin"
+#define NOTIFICATIONS_AUTH_SHOWSIGUP @"SiriusAuthShowSignup"
 
 #define NOTIFICATIONS_HOME_RELOAD @"SiriusHomeReload"
 #define NOTIFICATIONS_PHOTO_RELOADED @"SiriusPhotoReload"

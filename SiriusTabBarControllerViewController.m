@@ -23,6 +23,9 @@
 
 @interface SiriusTabBarControllerViewController ()
 
+@property SiriusSignUpViewController* signUpViewController;
+@property SiriusLogInViewController*  loginViewController;
+
 - (void)loggedInAsUser:(SiriusUser *)user;
 
 @end
@@ -32,15 +35,16 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     
-    /*    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-     if (self) {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+        if (self) {
      
-     [[NSNotificationCenter defaultCenter] addObserver:self
-     selector:@selector(showLogin:)
-     name:NOTIFICATIONS_AUTH_SHOWLOGIN
-     object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(showSignUp)
+                                                         name:NOTIFICATIONS_AUTH_SHOWSIGUP
+                                                       object:nil];
+            
      }
-     */
+    
     return self;
     
 }
@@ -70,25 +74,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) setAuth {
+    
+    self.signUpViewController	= [[SiriusSignUpViewController alloc] init];
+    self.loginViewController = [[SiriusLogInViewController alloc] init];
+    
+    self.signUpViewController.fields	= PFSignUpFieldsDefault;
+    self.signUpViewController.delegate = self;
+    
+    self.loginViewController.delegate = self;
+    
+    self.loginViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsPasswordForgotten | PFLogInFieldsFacebook;
+    self.loginViewController.facebookPermissions = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    self.loginViewController.signUpController	= self.signUpViewController;
+    
+    self.loginViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    self.loginViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    
+}
 
 -(void) showLogin:(id)sender
 {
-    SiriusSignUpViewController	*signUpViewController	= [[SiriusSignUpViewController alloc] init];
-    SiriusLogInViewController	*loginViewController = [[SiriusLogInViewController alloc] init];
+    [self setAuth];
+    [self presentViewController:self.loginViewController animated:YES completion:nil];
     
-    signUpViewController.fields	= PFSignUpFieldsDefault;
-    signUpViewController.delegate = self;
+}
+
+-(void) showSignUp
+{
+    [self setAuth];
     
-    loginViewController.delegate = self;
-    
-    loginViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsPasswordForgotten | PFLogInFieldsFacebook;
-    loginViewController.facebookPermissions = @[ @"user_about_me" ];
-    loginViewController.signUpController	= signUpViewController;
-    
-    loginViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-    loginViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    
-    [self presentViewController:loginViewController animated:YES completion:nil];
+    [self presentViewController:self.loginViewController.signUpController animated:YES completion:nil];
     
 }
 
@@ -227,10 +244,9 @@
     //Sirius additional sigup fields
     NSString* firstName = signUpController.firstName.text;
     NSString* lastName = signUpController.lastName.text;
-    //NSString *birthDate =
+    NSString *birthDate = signUpController.birthDate.text;
     NSString* gender = signUpController.gender.text;
-    //NSString* email = signUpController.signUpView.usernameField.text;
-    NSString* pswConfirm = signUpController.pswConfirm.text;
+//    NSString* pswConfirm = signUpController.pswConfirm.text;
 
     
     NSString	*strPrefs	= [NSString stringWithFormat:@"%@ %@ %@ %@ %@", kNewsPushNotification, kPAPActivityTypeFollow, kPAPActivityTypeJoined,  kPAPActivityTypeLike, kPAPActivityTypeComment];
@@ -240,10 +256,9 @@
     [user setObject:firstName forKey:@"firstName"];
     [user setObject:lastName forKey:@"lastName"];
     [user setObject:gender forKey:@"gender"];
-//    [user setObject:birthDate forKey:@"birthDate"];
-    //[user setObject:email forKey:@"email"];
+    [user setObject:birthDate forKey:@"birthDate"];
     
-    [user save];
+   // [user save];
     
     [self loggedInAsUser:user];
     

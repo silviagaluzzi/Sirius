@@ -980,7 +980,7 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
-				55DCCE921A9E768400EBA240 /* SignupLogin */,
+				55DCCE921A9E768400EBA240 /* Auth */,
 				5554BF091A8AA66500B3A408 /* Models */,
 				55D2F6621A92991D00D7C626 /* Camera */,
 				5554BF051A8A9AB400B3A408 /* SiriusTabBarControllerViewController.h */,
@@ -1700,7 +1700,7 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
-		55DCCE921A9E768400EBA240 /* SignupLogin */ = {
+		55DCCE921A9E768400EBA240 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				5554BDBB1A89607200B3A408 /* SiriusSignUpViewController.h */,
@@ -1710,7 +1710,7 @@
 				5554BD931A89607100B3A408 /* LoginViewController.h */,
 				5554BD941A89607100B3A408 /* LoginViewController.m */,
 			);
-			name = SignupLogin;
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {
