@@ -27,7 +27,7 @@
 
 - (void)sendPushNotificationOfType: (NSString *)aType toUser: (SiriusUser *)aUser;
 
-//- (void)logOut;
+- (void)logOut;
 - (BOOL)isValidUser:(SiriusUser *)user;
 - (void)facebookRequestDidLoad:(id)result;
 - (void)facebookRequestDidFailWithError:(NSError *)error;

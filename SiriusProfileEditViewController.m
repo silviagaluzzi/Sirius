@@ -79,8 +79,6 @@ static NSArray	*shoeSizes;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-	if (!self.sizeView.hidden)
-		[self hideChooseSize];
 	
 	[super viewWillDisappear: animated];
 }
@@ -127,55 +125,7 @@ static NSArray	*shoeSizes;
 	[av show];
 }
 
-- (void)showChooseSize
-{
-    
-    //self.sizeView.backgroundColor = [UIColor redColor];
-    CGRect	pRect	= self.sizeView.frame;
-	
-	pRect.origin.y			= self.view.bounds.origin.y + self.view.bounds.size.height;
-    
-	self.sizeView.frame		= pRect;
-	self.sizeView.hidden	= NO;
-	
-	[UIView animateWithDuration: 0.3
-					 animations: ^{
-						 CGRect	pRect		= self.sizeView.frame;
-						 pRect.origin.y			= self.view.bounds.origin.y + self.view.bounds.size.height - pRect.size.height;
-                         //if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-                             //pRect.origin.y = 0;
-                         //}
-						 self.sizeView.frame	= pRect;
-					 } completion: ^(BOOL finished) {
-						 if ([[SiriusUser currentUser] objectForKey: @"shoeSize"])
-							 [self.sizePicker selectRow: [shoeSizes indexOfObject: [[SiriusUser currentUser] objectForKey: @"shoeSize"]]
-											inComponent: 0
-											   animated: YES];
-						 else
-							 [self.sizePicker selectRow: 0
-											inComponent: 0
-											   animated: YES];
-						 self.settingsTableView.userInteractionEnabled	= NO;
-					 }];
- 
-}
-
-- (void)hideChooseSize
-{
-	[UIView animateWithDuration: 0.3
-					 animations: ^{
-						 CGRect	pRect			= self.sizeView.frame;
-						 
-						 pRect.origin.y			= self.view.bounds.origin.y + self.view.bounds.size.height;
-						 self.sizeView.frame	= pRect;
-					 } completion: ^(BOOL finished) {
-						 self.sizeView.hidden							= YES;
-						 self.settingsTableView.userInteractionEnabled	= YES;
-					 }];
-}
-
 #pragma mark - UIActionSheetDelegate
-
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	switch (buttonIndex) {
@@ -194,7 +144,6 @@ static NSArray	*shoeSizes;
 }
 
 #pragma mark - UIAlertViewDelegate
-
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	if (buttonIndex) {
@@ -264,7 +213,7 @@ static NSArray	*shoeSizes;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 8;
+	return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -286,25 +235,10 @@ static NSArray	*shoeSizes;
 			cell.textLabel.text	= NSLocalizedString(@"Reset password", nil);
 			break;
 		case 2:
-			break;
-		case 3:
-			cell.textLabel.text	= NSLocalizedString(@"Find Friends", nil);
-			cell.accessoryType	= UITableViewCellAccessoryDisclosureIndicator;
-			break;
-		case 4:
 			cell.textLabel.text	= NSLocalizedString(@"Notifications", nil);
 			cell.accessoryType	= UITableViewCellAccessoryDisclosureIndicator;
 			break;
-        case 5:
-			cell.textLabel.text	= NSLocalizedString(@"Privacy Policy", nil);
-			cell.accessoryType	= UITableViewCellAccessoryDisclosureIndicator;
-			break;
-		case 6:
-			cell.textLabel.text	= NSLocalizedString(@"User Policy", nil);
-			cell.accessoryType	= UITableViewCellAccessoryDisclosureIndicator;
-			break;
-
-		case 7:
+		case 3:
 			cell.textLabel.text	= NSLocalizedString(@"Sign out", nil);
 			break;
 	}
@@ -329,38 +263,24 @@ static NSArray	*shoeSizes;
 							  otherButtonTitles: nil] show];
 			break;
 		case 2:
+            /*			{
+             
+             SiriusNotificationsTableController	*vc	= [[SiriusNotificationsTableController alloc] initWithNibName: @"SiriusNotificationsTableController"
+             bundle: nil];
+             if (vc.view) {
+             vc.aUser	= [SiriusUser currentUser];
+             
+             [self.navigationController pushViewController: vc animated: YES];
+             }
+             }
+             */
 			break;
 		case 3:
-/*			{
-				SiriusUserSearchViewController	*vc	= [[SiriusUserSearchViewController alloc] initWithNibName: @"SiriusUserSearchViewController"
-																								bundle: nil];
-				
-				if (vc.view) {
-					vc.following	= self.following;
-					
-					[self.navigationController pushViewController: vc animated: YES];
-				}
-			}
- */
-			break;
-		case 4:
-/*			{
-
-				SiriusNotificationsTableController	*vc	= [[SiriusNotificationsTableController alloc] initWithNibName: @"SiriusNotificationsTableController"
-																										bundle: nil];
-				if (vc.view) {
-					vc.aUser	= [SiriusUser currentUser];
-					
-					[self.navigationController pushViewController: vc animated: YES];
-				}
-			}
- */
-			break;
-		case 7:
 			[self.navigationController popToRootViewControllerAnimated: YES];
-			//[[MainController sharedController] logOut];
+			[[MainController sharedController] logOut];
 			break;
 	}
+    
 	[tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 

@@ -980,6 +980,7 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
+				55C8DDFA1AA5021300A13C15 /* Profile */,
 				55DCCE921A9E768400EBA240 /* Auth */,
 				5554BF091A8AA66500B3A408 /* Models */,
 				55D2F6621A92991D00D7C626 /* Camera */,
@@ -1004,12 +1005,6 @@
 				5554BDAC1A89607200B3A408 /* SiriusFeedViewController.h */,
 				5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */,
 				5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */,
-				5554BDB51A89607200B3A408 /* SiriusProfileEditViewController.h */,
-				5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */,
-				5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */,
-				5554BDB81A89607200B3A408 /* SiriusProfileViewController.h */,
-				5554BDB91A89607200B3A408 /* SiriusProfileViewController.m */,
-				5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */,
 				5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */,
 				5554BDC11A89607200B3A408 /* TTTTimeIntervalFormatter.h */,
 				5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */,
@@ -1078,6 +1073,19 @@
 				5554BDA31A89607100B3A408 /* SiriusActivity.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		55C8DDFA1AA5021300A13C15 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5554BDB51A89607200B3A408 /* SiriusProfileEditViewController.h */,
+				5554BDB61A89607200B3A408 /* SiriusProfileEditViewController.m */,
+				5554BDB71A89607200B3A408 /* SiriusProfileEditViewController.xib */,
+				5554BDB81A89607200B3A408 /* SiriusProfileViewController.h */,
+				5554BDB91A89607200B3A408 /* SiriusProfileViewController.m */,
+				5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		55CF406E1A9A13C400BF9939 /* GoogleAnalytics */ = {

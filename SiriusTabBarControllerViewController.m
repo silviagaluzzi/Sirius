@@ -39,8 +39,8 @@
         if (self) {
      
             [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(showSignUp)
-                                                         name:NOTIFICATIONS_AUTH_SHOWSIGUP
+                                                     selector:@selector(showLogin:)
+                                                         name:NOTIFICATIONS_AUTH_SHOWLOGIN
                                                        object:nil];
             
      }
@@ -104,7 +104,6 @@
 -(void) showSignUp
 {
     [self setAuth];
-    
     [self presentViewController:self.loginViewController.signUpController animated:YES completion:nil];
     
 }
@@ -156,9 +155,7 @@
     
     //if (![[MainController sharedController] isValidUser:user] && [PFFacebookUtils isLinkedWithUser: user]) {
         
-        //TODO: progress hud
-        //        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
-        
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
         [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
             if (!error) {
                 [[MainController sharedController] facebookRequestDidLoad:result];
@@ -167,9 +164,9 @@
             } else {
                 [[MainController sharedController] facebookRequestDidFailWithError:error];
             }
-            
-            //  [SVProgressHUD dismiss];
+            [SVProgressHUD dismiss];
         }];
+    
     
 //    } else {
         
@@ -258,9 +255,7 @@
     [user setObject:gender forKey:@"gender"];
     [user setObject:birthDate forKey:@"birthDate"];
     
-   // [user save];
-    
-    [self loggedInAsUser:user];
+    [user save];
     
     [signUpController dismissViewControllerAnimated:NO completion:nil];
     [self dismissViewControllerAnimated:NO completion:nil];

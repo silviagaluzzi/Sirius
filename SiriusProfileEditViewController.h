@@ -22,13 +22,6 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDe
 @property (weak, nonatomic) IBOutlet UIImageView	*imageView;
 @property (weak, nonatomic) IBOutlet UILabel		*userNameLabel;
 @property (weak, nonatomic) IBOutlet UITableView	*settingsTableView;
-@property (weak, nonatomic) IBOutlet UIView			*sizeView;
-@property (weak, nonatomic) IBOutlet UIPickerView	*sizePicker;
 @property (weak, nonatomic) IBOutlet UIButton *choosePhotoButton;
-
-- (IBAction)choosePhoto:(id)sender;
-
-- (IBAction)chooseSize:(id)sender;
-- (IBAction)cancelSize:(id)sender;
 
 @end

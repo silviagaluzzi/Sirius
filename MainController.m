@@ -89,9 +89,10 @@
                                                  //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
                                              }];
     } else {
+        
         [SiriusUser logOut];
-        //TODO: qui mosta login
-        //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
+        [self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
+        
     }
     
     
@@ -196,7 +197,8 @@
 
         [user save];
         
-        [self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWSIGUP];
+        //in accordo con Luca facciamo che l'utente che fa login con FB non è obbligato ad inserire dati aggiuntivi
+        //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWSIGUP];
         
     }
     
