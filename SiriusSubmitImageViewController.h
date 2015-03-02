@@ -12,5 +12,6 @@
 @interface SiriusSubmitImageViewController : SiriusViewController <UITextFieldDelegate, UITextViewDelegate, MFMailComposeViewControllerDelegate>
 
 -(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil photo:(UIImage *)photo;
+@property (weak, nonatomic) IBOutlet UIButton *btbSave;
 
 @end

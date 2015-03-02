@@ -57,7 +57,6 @@
 
 - (void)logOut {
     
-    
     // clear cache
     [[PAPCache sharedCache] clear];
     
@@ -85,8 +84,7 @@
                                                  // We don't care about errors here, log out anyway
                                                  [SiriusUser logOut];
                                                  
-                                                 //TODO: qui mosta login
-                                                 //[self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
+                                                 [self postNotificationWithName:NOTIFICATIONS_AUTH_SHOWLOGIN];
                                              }];
     } else {
         

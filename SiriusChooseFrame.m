@@ -45,7 +45,6 @@ static NSString *frameCellId = @"frameCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
@@ -60,14 +59,15 @@ static NSString *frameCellId = @"frameCellId";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rotateButton];
 
     
-    /*
-    UIButton *buttonBack =  [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    /*UIButton *buttonBack =  [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonBack setFrame:CGRectMake(0, 0, 50, 50)];
     [buttonBack setImageEdgeInsets:UIEdgeInsetsMake(-10, 0, 0, 0)];
-    [buttonBack setImage:[UIImage imageNamed:@"camera_back"] forState:UIControlStateNormal];
+    //[buttonBack setImage:[UIImage imageNamed:@"camera_back"] forState:UIControlStateNormal];
     //[buttonBack addTarget:self action:@selector(doCancel:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonBack];
      */
+    
     
     self.photoImageView.image = [UIImage imageWithCGImage:self.thePhoto.CGImage];
 

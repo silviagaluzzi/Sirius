@@ -73,6 +73,7 @@
                                     self.comment.frame.size.height-40);
 
     self.imageView.image = self.photo;
+    //TODO: qui crop della foto? è un'azione automatica? o manuale da parte dell'utente
     
 }
 

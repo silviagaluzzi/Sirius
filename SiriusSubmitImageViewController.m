@@ -7,6 +7,7 @@
 
 
 #import "SiriusSubmitImageViewController.h"
+#import "SiriusNewPhotoViewController.h"
 //#import "AFNetworking.h"
 //#import "NSString+SHA512.h"
 //#import "Base64.h"
@@ -18,25 +19,16 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVAudioPlayer.h>
 
+
 #define degreesToRadians(degrees) (M_PI * degrees / 180.0)
 
 @interface SiriusSubmitImageViewController ()<UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIImage * thePhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UISwitch *shareToOvsSwitch;
-@property (weak, nonatomic) IBOutlet UIImageView *kissImage;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *kissHeight;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *kissWidth;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *kissTop;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *kissRight;
-
 
 @property BOOL showAnimation;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
-
-- (IBAction)sendButton:(id)sender;
 
 @property BOOL counterUpdated;
 
@@ -62,16 +54,7 @@
     
     self.showAnimation = NO;
     self.imageView.image = self.thePhoto;
-    self.kissImage.hidden = YES;
-    self.kissImage.transform = CGAffineTransformMakeRotation(degreesToRadians(-10));
     
-    NSString *path = [NSString stringWithFormat:@"%@/Kiss_mixdown.mp3", [[NSBundle mainBundle] resourcePath]];
-    NSURL *soundURL = [NSURL fileURLWithPath:path];
-    
-    // Create audio player object and initialize with URL to sound
-    NSError *error = nil;
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:&error];
-
     self.counterUpdated = NO;
 }
 
@@ -99,10 +82,12 @@
 */
 
 #pragma mark - photo submission
-- (IBAction)sendButton:(id)sender {
-    //TODO: save image
+- (IBAction)saveImg:(id)sender {
+    
+    SiriusNewPhotoViewController* newPhoto = [[SiriusNewPhotoViewController alloc] initWithNibName:@"SiriusNewPhotoViewController" bundle:nil photo:self.thePhoto];
+    
+    [self.navigationController pushViewController:newPhoto animated:YES];
+
 }
-
-
 
 @end

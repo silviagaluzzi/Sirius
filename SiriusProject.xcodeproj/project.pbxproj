@@ -980,6 +980,7 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
+				55C8DDFE1AA507AF00A13C15 /* Common */,
 				55C8DDFA1AA5021300A13C15 /* Profile */,
 				55DCCE921A9E768400EBA240 /* Auth */,
 				5554BF091A8AA66500B3A408 /* Models */,
@@ -1086,6 +1087,13 @@
 				5554BDBA1A89607200B3A408 /* SiriusProfileViewController.xib */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		55C8DDFE1AA507AF00A13C15 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		55CF406E1A9A13C400BF9939 /* GoogleAnalytics */ = {

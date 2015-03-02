@@ -18,5 +18,6 @@
 @property (nonatomic, weak) id <SiriusChooseFrameDelegate> delegate;
 
 -(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil photo:(UIImage *)photo;
+@property (weak, nonatomic) IBOutlet UIButton *btbOK;
 
 @end
