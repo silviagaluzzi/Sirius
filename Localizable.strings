@@ -15,5 +15,6 @@
 "Please enter a username." = "Please insert your email";
 "SIGN_UP_FEMALE" = "Female";
 "SIGN_UP_MALE" = "Male";
+"ERROR_USER_SAVE" = "Errore in fase di registrazione utente. Si prega di riprovare.";
 
 

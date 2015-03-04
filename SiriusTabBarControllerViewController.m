@@ -230,7 +230,8 @@
 
         return NO;
     }
-
+    
+    //manca controllo validità PSW (lunghezza uguaglianza fra le due)
     return YES;
     
 }
@@ -241,24 +242,33 @@
     //Sirius additional sigup fields
     NSString* firstName = signUpController.firstName.text;
     NSString* lastName = signUpController.lastName.text;
-    NSString *birthDate = signUpController.birthDate.text;
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
+    NSDate* birthDate = [dateFormat dateFromString:signUpController.birthDate.text];
     NSString* gender = signUpController.gender.text;
-//    NSString* pswConfirm = signUpController.pswConfirm.text;
-
     
-    NSString	*strPrefs	= [NSString stringWithFormat:@"%@ %@ %@ %@ %@", kNewsPushNotification, kPAPActivityTypeFollow, kPAPActivityTypeJoined,  kPAPActivityTypeLike, kPAPActivityTypeComment];
+    NSString* strPrefs	= [NSString stringWithFormat:@"%@ %@ %@ %@ %@", kNewsPushNotification, kPAPActivityTypeFollow, kPAPActivityTypeJoined,  kPAPActivityTypeLike, kPAPActivityTypeComment];
     
-    //we have to save all fields for the new user (all fields are required?)
+    //we have to save all fields for the new user
     [user setObject:strPrefs forKey:@"channels"];
     [user setObject:firstName forKey:@"firstName"];
     [user setObject:lastName forKey:@"lastName"];
     [user setObject:gender forKey:@"gender"];
     [user setObject:birthDate forKey:@"birthDate"];
     
-    [user save];
+    [SVProgressHUD show];
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [SVProgressHUD dismiss];
+            [signUpController dismissViewControllerAnimated:NO completion:nil];
+            [self dismissViewControllerAnimated:NO completion:nil];
+        } else {
+            NSLog(@"%@", error);
+            [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"ERROR_SAVE_USER", "ERROR_USER_SAVE")];
+        }
+    }];
     
-    [signUpController dismissViewControllerAnimated:NO completion:nil];
-    [self dismissViewControllerAnimated:NO completion:nil];
     
 }
 
