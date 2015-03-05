@@ -122,7 +122,6 @@
     }
     
     [self userInterfaceSetup];
-//    self.window.backgroundColor = [UIColor whiteColor];
     
     return YES;
 }
@@ -194,7 +193,6 @@
      */
     
     
-    //TODO: FB
     [FBSettings setDefaultAppID:FACEBOOKAPPID];
     [FBAppEvents activateApp];
     
@@ -243,32 +241,69 @@
     
     //Tabs
     UIEdgeInsets tabInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    //[navFeed.tabBarItem setFinishedSelectedImage:[[UIImage imageNamed:@"tab_icon_home_on"]
-    //                                            imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-    //             withFinishedUnselectedImage:[[UIImage imageNamed:@"tab_icon_home_off"]
-    //                                        imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    navFeed.tabBarItem.title = @"FEED";
+    CGSize newSize = CGSizeMake(20, 20);
+    
+    //tab Feed
+    UIImage* imageFeedOn = [UIImage imageNamed:@"ic_tab_feed_on"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageFeedOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageFeedOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageFeedOff = [UIImage imageNamed:@"ic_tab_feed_off"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageFeedOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageFeedOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiFeed = [navFeed.tabBarItem initWithTitle:@"FEED" image:newImageFeedOn selectedImage:newImageFeedOff];
+    [navFeed setTabBarItem:tbiFeed];
     navFeed.tabBarItem.imageInsets = tabInsets;
     
-    //        [navFeed.tabBarItem setFinishedSelectedImage:nil
-    //                      withFinishedUnselectedImage:nil];
-    navCam.tabBarItem.title = @"CAMERA";
+    
+    
+    //tab Camera (che poi non sarà più camera)
+    UIImage* imageCameraOn = [UIImage imageNamed:@"ic_btn_photo"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageCameraOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageCameraOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageCameraOff = [UIImage imageNamed:@"ic_btn_photo"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageCameraOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImagecameraOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiCamera = [navCam.tabBarItem initWithTitle:@"CAMERA" image:newImageCameraOn selectedImage:newImagecameraOff];
+    [navCam setTabBarItem:tbiCamera];
     navCam.tabBarItem.imageInsets = tabInsets;
     
-    //       [navAct.tabBarItem setFinishedSelectedImage:[[UIImage imageNamed:@"tab_icon_activity_on"]
-    //                                                imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-    //             withFinishedUnselectedImage:[[UIImage imageNamed:@"tab_icon_activity_off"]
-    //                                      imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    navAct.tabBarItem.title = @"ACTIVITY";
+    //tab Activity
+    UIImage* imageActivityOn = [UIImage imageNamed:@"ic_tab_activity_on"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageActivityOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageActivityOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageActivityOff = [UIImage imageNamed:@"ic_tab_activity_off"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageActivityOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageActivityOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiActivity = [navAct.tabBarItem initWithTitle:@"ACTIVITY" image:newImageActivityOn selectedImage:newImageActivityOff];
+    [navAct setTabBarItem:tbiActivity];
     navAct.tabBarItem.imageInsets = tabInsets;
     
+    //tab Profile
+    UIImage* imageProfileOn = [UIImage imageNamed:@"ic_tab_profile_on"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageProfileOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageProfileOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageProfileOff = [UIImage imageNamed:@"ic_tab_profile_off"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageProfileOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageProfileOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
-    //     [navProfile.tabBarItem setFinishedSelectedImage:[[UIImage imageNamed:@"tab_icon_profile_on"]
-    //                                                  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-    //                   withFinishedUnselectedImage:[[UIImage imageNamed:@"tab_icon_profile_off"]
-    //                                            imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    navProfile.tabBarItem.title = @"PROFILE";
+    UITabBarItem *tbiProfile = [navProfile.tabBarItem initWithTitle:@"PROFILE" image:newImageProfileOn selectedImage:newImageProfileOff];
+    [navProfile setTabBarItem:tbiProfile];
     navProfile.tabBarItem.imageInsets = tabInsets;
     
     

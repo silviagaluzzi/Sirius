@@ -322,6 +322,20 @@
 		55D2F9B71A96804800D7C626 /* SiriusNewPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D2F9B51A96804800D7C626 /* SiriusNewPhotoViewController.m */; };
 		55D2F9B81A96804800D7C626 /* SiriusNewPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55D2F9B61A96804800D7C626 /* SiriusNewPhotoViewController.xib */; };
 		55DCCE961A9E775C00EBA240 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55DCCE951A9E775C00EBA240 /* Localizable.strings */; };
+		55DDBBFC1AA902BD00D3BFE3 /* ic_btn_gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBEE1AA902BD00D3BFE3 /* ic_btn_gallery.png */; };
+		55DDBBFD1AA902BD00D3BFE3 /* ic_btn_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBEF1AA902BD00D3BFE3 /* ic_btn_photo.png */; };
+		55DDBBFE1AA902BD00D3BFE3 /* ic_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF01AA902BD00D3BFE3 /* ic_facebook.png */; };
+		55DDBBFF1AA902BD00D3BFE3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF11AA902BD00D3BFE3 /* ic_launcher.png */; };
+		55DDBC001AA902BD00D3BFE3 /* ic_tab_activity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF21AA902BD00D3BFE3 /* ic_tab_activity_off.png */; };
+		55DDBC011AA902BD00D3BFE3 /* ic_tab_activity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF31AA902BD00D3BFE3 /* ic_tab_activity_on.png */; };
+		55DDBC021AA902BD00D3BFE3 /* ic_tab_feed_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF41AA902BD00D3BFE3 /* ic_tab_feed_off.png */; };
+		55DDBC031AA902BD00D3BFE3 /* ic_tab_feed_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF51AA902BD00D3BFE3 /* ic_tab_feed_on.png */; };
+		55DDBC041AA902BD00D3BFE3 /* ic_tab_home_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF61AA902BD00D3BFE3 /* ic_tab_home_off.png */; };
+		55DDBC051AA902BD00D3BFE3 /* ic_tab_home_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF71AA902BD00D3BFE3 /* ic_tab_home_on.png */; };
+		55DDBC061AA902BD00D3BFE3 /* ic_tab_profile_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF81AA902BD00D3BFE3 /* ic_tab_profile_off.png */; };
+		55DDBC071AA902BD00D3BFE3 /* ic_tab_profile_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBF91AA902BD00D3BFE3 /* ic_tab_profile_on.png */; };
+		55DDBC081AA902BD00D3BFE3 /* ic_tab_settings_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBFA1AA902BD00D3BFE3 /* ic_tab_settings_off.png */; };
+		55DDBC091AA902BD00D3BFE3 /* ic_tab_settings_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DDBBFB1AA902BD00D3BFE3 /* ic_tab_settings_on.png */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		811B095C1A09503D008B3393 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811B095B1A09503D008B3393 /* ParseUI.framework */; };
 		817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817AD67B196B009E0014C796 /* Bolts.framework */; };
@@ -882,6 +896,21 @@
 		55D2F9B51A96804800D7C626 /* SiriusNewPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriusNewPhotoViewController.m; sourceTree = SOURCE_ROOT; };
 		55D2F9B61A96804800D7C626 /* SiriusNewPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiriusNewPhotoViewController.xib; sourceTree = SOURCE_ROOT; };
 		55DCCE951A9E775C00EBA240 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
+		55DDBBEC1AA8FE3400D3BFE3 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = SOURCE_ROOT; };
+		55DDBBEE1AA902BD00D3BFE3 /* ic_btn_gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_btn_gallery.png; sourceTree = SOURCE_ROOT; };
+		55DDBBEF1AA902BD00D3BFE3 /* ic_btn_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_btn_photo.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF01AA902BD00D3BFE3 /* ic_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_facebook.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF11AA902BD00D3BFE3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF21AA902BD00D3BFE3 /* ic_tab_activity_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_activity_off.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF31AA902BD00D3BFE3 /* ic_tab_activity_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_activity_on.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF41AA902BD00D3BFE3 /* ic_tab_feed_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_feed_off.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF51AA902BD00D3BFE3 /* ic_tab_feed_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_feed_on.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF61AA902BD00D3BFE3 /* ic_tab_home_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_home_off.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF71AA902BD00D3BFE3 /* ic_tab_home_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_home_on.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF81AA902BD00D3BFE3 /* ic_tab_profile_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_profile_off.png; sourceTree = SOURCE_ROOT; };
+		55DDBBF91AA902BD00D3BFE3 /* ic_tab_profile_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_profile_on.png; sourceTree = SOURCE_ROOT; };
+		55DDBBFA1AA902BD00D3BFE3 /* ic_tab_settings_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_settings_off.png; sourceTree = SOURCE_ROOT; };
+		55DDBBFB1AA902BD00D3BFE3 /* ic_tab_settings_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tab_settings_on.png; sourceTree = SOURCE_ROOT; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -980,6 +1009,8 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
+				55DDBBEB1AA8FDF600D3BFE3 /* Feed */,
+				55DDBBE81AA8FDE400D3BFE3 /* Activity */,
 				55C8DDFE1AA507AF00A13C15 /* Common */,
 				55C8DDFA1AA5021300A13C15 /* Profile */,
 				55DCCE921A9E768400EBA240 /* Auth */,
@@ -1000,13 +1031,6 @@
 				5554BD9F1A89607100B3A408 /* PAPProfileImageView.m */,
 				5554BDA01A89607100B3A408 /* PAPUtility.h */,
 				5554BDA11A89607100B3A408 /* PAPUtility.m */,
-				5554BDA41A89607100B3A408 /* SiriusActivityViewController.h */,
-				5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */,
-				5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */,
-				5554BDAC1A89607200B3A408 /* SiriusFeedViewController.h */,
-				5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */,
-				5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */,
-				5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */,
 				5554BDC11A89607200B3A408 /* TTTTimeIntervalFormatter.h */,
 				5554BDC21A89607200B3A408 /* TTTTimeIntervalFormatter.m */,
 				5554BDC31A89607200B3A408 /* UIImage+AlphaAdditions.h */,
@@ -1014,7 +1038,6 @@
 				5554BDC51A89607200B3A408 /* UIImage+ResizeAdditions.h */,
 				5554BDC61A89607200B3A408 /* UIImage+ResizeAdditions.m */,
 				5554BDC71A89607200B3A408 /* UIImage+RoundedCornerAdditions.h */,
-				5554BF041A8A9A0B00B3A408 /* SiriusViewController.h */,
 				5554BDC81A89607200B3A408 /* UIImage+RoundedCornerAdditions.m */,
 				5554BDC91A89607200B3A408 /* Utility.h */,
 				5554BDEA1A89684400B3A408 /* SiriusAppDelegate.h */,
@@ -1092,6 +1115,10 @@
 		55C8DDFE1AA507AF00A13C15 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55DDBBED1AA9025D00D3BFE3 /* images */,
+				5554BF041A8A9A0B00B3A408 /* SiriusViewController.h */,
+				5554BDFF1A8969CD00B3A408 /* SiriusViewController.m */,
+				55DDBBEC1AA8FE3400D3BFE3 /* Colors.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1729,6 +1756,47 @@
 			name = Auth;
 			sourceTree = "<group>";
 		};
+		55DDBBE81AA8FDE400D3BFE3 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5554BDA41A89607100B3A408 /* SiriusActivityViewController.h */,
+				5554BDA51A89607200B3A408 /* SiriusActivityViewController.m */,
+				5554BDA61A89607200B3A408 /* SiriusActivityViewController.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		55DDBBEB1AA8FDF600D3BFE3 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5554BDAC1A89607200B3A408 /* SiriusFeedViewController.h */,
+				5554BDAD1A89607200B3A408 /* SiriusFeedViewController.m */,
+				5554BDAE1A89607200B3A408 /* SiriusFeedViewController.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		55DDBBED1AA9025D00D3BFE3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				55DDBBEE1AA902BD00D3BFE3 /* ic_btn_gallery.png */,
+				55DDBBEF1AA902BD00D3BFE3 /* ic_btn_photo.png */,
+				55DDBBF01AA902BD00D3BFE3 /* ic_facebook.png */,
+				55DDBBF11AA902BD00D3BFE3 /* ic_launcher.png */,
+				55DDBBF21AA902BD00D3BFE3 /* ic_tab_activity_off.png */,
+				55DDBBF31AA902BD00D3BFE3 /* ic_tab_activity_on.png */,
+				55DDBBF41AA902BD00D3BFE3 /* ic_tab_feed_off.png */,
+				55DDBBF51AA902BD00D3BFE3 /* ic_tab_feed_on.png */,
+				55DDBBF61AA902BD00D3BFE3 /* ic_tab_home_off.png */,
+				55DDBBF71AA902BD00D3BFE3 /* ic_tab_home_on.png */,
+				55DDBBF81AA902BD00D3BFE3 /* ic_tab_profile_off.png */,
+				55DDBBF91AA902BD00D3BFE3 /* ic_tab_profile_on.png */,
+				55DDBBFA1AA902BD00D3BFE3 /* ic_tab_settings_off.png */,
+				55DDBBFB1AA902BD00D3BFE3 /* ic_tab_settings_on.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1833,6 +1901,7 @@
 				55CF416D1A9A304C00BF9939 /* SiriusChooseFrame.xib in Resources */,
 				55CF40E61A9A1FFD00BF9939 /* 6.jpg in Resources */,
 				55CF40ED1A9A1FFD00BF9939 /* 9@2x.jpg in Resources */,
+				55DDBC041AA902BD00D3BFE3 /* ic_tab_home_off.png in Resources */,
 				5554BE061A896C0100B3A408 /* MainWindow.xib in Resources */,
 				55CF40FD1A9A1FFD00BF9939 /* filter-close.png in Resources */,
 				55CF40FF1A9A1FFD00BF9939 /* filter-open.png in Resources */,
@@ -1845,12 +1914,14 @@
 				55CF410A1A9A1FFD00BF9939 /* focus-crosshair@2x.png in Resources */,
 				55CF41201A9A201300BF9939 /* 17.acv in Resources */,
 				55CF40F51A9A1FFD00BF9939 /* camera-button.png in Resources */,
+				55DDBBFD1AA902BD00D3BFE3 /* ic_btn_photo.png in Resources */,
 				55CF41071A9A1FFD00BF9939 /* flash.png in Resources */,
 				55CF40F61A9A1FFD00BF9939 /* camera-button@2x.png in Resources */,
 				55CF40EE1A9A1FFD00BF9939 /* blackframe.png in Resources */,
 				55D2F86A1A92A43B00D7C626 /* lookup_amatorka.png in Resources */,
 				55CF40EB1A9A1FFD00BF9939 /* 8@2x.jpg in Resources */,
 				55CF411F1A9A201300BF9939 /* 06.acv in Resources */,
+				55DDBC091AA902BD00D3BFE3 /* ic_tab_settings_on.png in Resources */,
 				55CF40F11A9A1FFD00BF9939 /* blur-on.png in Resources */,
 				55CF410D1A9A1FFD00BF9939 /* library.png in Resources */,
 				55DCCE961A9E775C00EBA240 /* Localizable.strings in Resources */,
@@ -1858,10 +1929,14 @@
 				55CF411E1A9A201300BF9939 /* 02.acv in Resources */,
 				5554BE031A896BA900B3A408 /* InfoPlist.strings in Resources */,
 				5554BDD71A89607200B3A408 /* SiriusCameraViewController.xib in Resources */,
+				55DDBBFF1AA902BD00D3BFE3 /* ic_launcher.png in Resources */,
 				55CF410B1A9A1FFD00BF9939 /* front-camera.png in Resources */,
 				55CF40DA1A9A1FFD00BF9939 /* 1.jpg in Resources */,
 				55CF40F41A9A1FFD00BF9939 /* blur@2x.png in Resources */,
+				55DDBC021AA902BD00D3BFE3 /* ic_tab_feed_off.png in Resources */,
+				55DDBC081AA902BD00D3BFE3 /* ic_tab_settings_off.png in Resources */,
 				55D2F86B1A92A43B00D7C626 /* lookup_miss_etikate.png in Resources */,
+				55DDBBFC1AA902BD00D3BFE3 /* ic_btn_gallery.png in Resources */,
 				55CF410E1A9A1FFD00BF9939 /* library@2x.png in Resources */,
 				55CF40E01A9A1FFD00BF9939 /* 3.jpg in Resources */,
 				55CF40E21A9A1FFD00BF9939 /* 4.jpg in Resources */,
@@ -1877,13 +1952,16 @@
 				55D2F90D1A92A43B00D7C626 /* Info.plist in Resources */,
 				55CF40E31A9A1FFD00BF9939 /* 4@2x.jpg in Resources */,
 				55CF40F81A9A1FFD00BF9939 /* camera-icon@2x.png in Resources */,
+				55DDBC071AA902BD00D3BFE3 /* ic_tab_profile_on.png in Resources */,
 				55CF40FC1A9A1FFD00BF9939 /* dock_bg@2x.png in Resources */,
 				55CF41041A9A1FFD00BF9939 /* flash-auto@2x.png in Resources */,
 				55CF41221A9A201300BF9939 /* crossprocess.acv in Resources */,
 				55CF41231A9A201300BF9939 /* purple-green.acv in Resources */,
 				55CF40E91A9A1FFD00BF9939 /* 7@2x.jpg in Resources */,
+				55DDBC051AA902BD00D3BFE3 /* ic_tab_home_on.png in Resources */,
 				5554BDFB1A89692D00B3A408 /* Info.plist in Resources */,
 				55CF40DB1A9A1FFD00BF9939 /* 10.jpg in Resources */,
+				55DDBBFE1AA902BD00D3BFE3 /* ic_facebook.png in Resources */,
 				55CF40DC1A9A1FFD00BF9939 /* 10@2x.jpg in Resources */,
 				55CF41091A9A1FFD00BF9939 /* focus-crosshair.png in Resources */,
 				55CF40DF1A9A1FFD00BF9939 /* 2@2x.jpg in Resources */,
@@ -1899,13 +1977,16 @@
 				55CF40F21A9A1FFD00BF9939 /* blur-on@2x.png in Resources */,
 				55CF41001A9A1FFD00BF9939 /* filter-open@2x.png in Resources */,
 				55CF416F1A9A304C00BF9939 /* SiriusFrameCollectionViewCell.xib in Resources */,
+				55DDBC001AA902BD00D3BFE3 /* ic_tab_activity_off.png in Resources */,
 				55CF40F31A9A1FFD00BF9939 /* blur.png in Resources */,
+				55DDBC031AA902BD00D3BFE3 /* ic_tab_feed_on.png in Resources */,
 				55D2F86C1A92A43B00D7C626 /* lookup_soft_elegance_1.png in Resources */,
 				55CF40EF1A9A1FFD00BF9939 /* mask.png in Resources */,
 				55CF40E71A9A1FFD00BF9939 /* 6@2x.jpg in Resources */,
 				55CF41051A9A1FFD00BF9939 /* flash-off.png in Resources */,
 				55CF40DE1A9A1FFD00BF9939 /* 2.jpg in Resources */,
 				55CF40EA1A9A1FFD00BF9939 /* 8.jpg in Resources */,
+				55DDBC011AA902BD00D3BFE3 /* ic_tab_activity_on.png in Resources */,
 				55CF40F91A9A1FFD00BF9939 /* close.png in Resources */,
 				55CF41241A9A201300BF9939 /* yellow-red.acv in Resources */,
 				55CF41061A9A1FFD00BF9939 /* flash-off@2x.png in Resources */,
@@ -1914,6 +1995,7 @@
 				55CF40E41A9A1FFD00BF9939 /* 5.jpg in Resources */,
 				55CF41741A9A376E00BF9939 /* SiriusSubmitImageViewController.xib in Resources */,
 				55CF40F71A9A1FFD00BF9939 /* camera-icon.png in Resources */,
+				55DDBC061AA902BD00D3BFE3 /* ic_tab_profile_off.png in Resources */,
 				55CF41491A9A2FBF00BF9939 /* skin02.png in Resources */,
 				55CF41081A9A1FFD00BF9939 /* flash@2x.png in Resources */,
 				55CF40F01A9A1FFD00BF9939 /* sample1.jpg in Resources */,
