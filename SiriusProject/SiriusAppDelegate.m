@@ -9,7 +9,6 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <ParseCrashReporting/ParseCrashReporting.h>
 
-//#import "SiriusTabBarControllerViewController.h"
 #import "SiriusAppDelegate.h"
 #import "SiriusViewController.h"
 #import "LoginViewController.h"
@@ -23,6 +22,7 @@
 #import "SiriusActivityViewController.h"
 #import "SiriusCameraViewController.h"
 #import "MainController.h"
+#import "Colors.h"
 
 #if APPSTORE
 #define GATRACKINGID @"UA-?"
@@ -203,48 +203,39 @@
     //Feed
     SiriusFeedViewController* home = [[SiriusFeedViewController alloc] initWithNibName:@"SiriusFeedViewController" bundle:nil];
     UINavigationController* navFeed = [[UINavigationController alloc] initWithRootViewController:home];
+
+    //Activity
+    SiriusActivityViewController* act = [[SiriusActivityViewController alloc] initWithNibName:@"SiriusActivityViewController" bundle:nil];
+    UINavigationController* navAct = [[UINavigationController alloc] initWithRootViewController:act];
+
+    //From World
+    SiriusActivityViewController* fromWorld = [[SiriusActivityViewController alloc] initWithNibName:@"SiriusActivityViewController" bundle:nil];
+    UINavigationController* navFromWorld = [[UINavigationController alloc] initWithRootViewController:fromWorld];
     
     //Profile
     SiriusProfileViewController* profile = [[SiriusProfileViewController alloc] initWithNibName:@"SiriusProfileViewController" bundle:nil]; //qui metti user
     UINavigationController* navProfile = [[UINavigationController alloc] initWithRootViewController:profile];
     
-    //Activity
-    SiriusActivityViewController* act = [[SiriusActivityViewController alloc] initWithNibName:@"SiriusActivityViewController" bundle:nil];
-    UINavigationController* navAct = [[UINavigationController alloc] initWithRootViewController:act];
+    //Search
+    SiriusActivityViewController* search = [[SiriusActivityViewController alloc] initWithNibName:@"SiriusActivityViewController" bundle:nil];
+    UINavigationController* navSearch = [[UINavigationController alloc] initWithRootViewController:search];
+
     
     //camera
-    SiriusCameraViewController* cam = [[SiriusCameraViewController alloc] initWithNibName:@"SiriusCameraViewController" bundle:nil];
+/*    SiriusCameraViewController* cam = [[SiriusCameraViewController alloc] initWithNibName:@"SiriusCameraViewController" bundle:nil];
     UINavigationController* navCam = [[UINavigationController alloc] initWithRootViewController:cam];
+  */
     
+    [self.tabController setViewControllers:@[navFeed, navAct, navFromWorld, navProfile, navSearch]];
+    //[self.tabController addCenterButtonWithImage:[UIImage imageNamed:@"tab_icon_camera_off"] highlightImage:nil];
     
-    [self.tabController setViewControllers:@[navFeed, navCam, navAct, navProfile]];
-    [self.tabController addCenterButtonWithImage:[UIImage imageNamed:@"tab_icon_camera_off"] highlightImage:nil];
-    
-    /*TODO:UI APPEARANCE*/
-    
-    /*[ [UITabBarItem appearance] setTitleTextAttributes:@{
-     UITextAttributeTextColor: COLORS_TITLE_TEXT,
-     UITextAttributeTextShadowColor: [UIColor clearColor],
-     UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-     UITextAttributeFont: [UIFont fontWithName:@"TrajanPro-Regular" size:8]}
-     
-     forState: UIControlStateNormal];
-     
-     [ [UITabBarItem appearance] setTitleTextAttributes:@{
-     UITextAttributeTextColor: COLORS_TEXT_TABBAR_SELECTED,
-     UITextAttributeTextShadowColor: [UIColor clearColor],
-     UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-     UITextAttributeFont: [UIFont fontWithName:@"TrajanPro-Regular" size:8]}
-     
-     forState: UIControlStateSelected];
-     */
     
     //Tabs
     UIEdgeInsets tabInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     
     CGSize newSize = CGSizeMake(20, 20);
     
-    //tab Feed
+    //1.tab Feed
     UIImage* imageFeedOn = [UIImage imageNamed:@"ic_tab_feed_on"];
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imageFeedOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -259,24 +250,7 @@
     [navFeed setTabBarItem:tbiFeed];
     navFeed.tabBarItem.imageInsets = tabInsets;
     
-    
-    
-    //tab Camera (che poi non sarà più camera)
-    UIImage* imageCameraOn = [UIImage imageNamed:@"ic_btn_photo"];
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [imageCameraOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImageCameraOn = UIGraphicsGetImageFromCurrentImageContext();
-    UIImage* imageCameraOff = [UIImage imageNamed:@"ic_btn_photo"];
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [imageCameraOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImagecameraOff = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    UITabBarItem *tbiCamera = [navCam.tabBarItem initWithTitle:@"CAMERA" image:newImageCameraOn selectedImage:newImagecameraOff];
-    [navCam setTabBarItem:tbiCamera];
-    navCam.tabBarItem.imageInsets = tabInsets;
-    
-    //tab Activity
+    //2.tab Activity
     UIImage* imageActivityOn = [UIImage imageNamed:@"ic_tab_activity_on"];
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imageActivityOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -291,7 +265,42 @@
     [navAct setTabBarItem:tbiActivity];
     navAct.tabBarItem.imageInsets = tabInsets;
     
-    //tab Profile
+    //3.tab from world
+    UIImage* imageFromWorldOn = [UIImage imageNamed:@"ic_tab_home_on"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageFromWorldOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageFromWorldOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageFromWorldOff = [UIImage imageNamed:@"ic_tab_home_off"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageFromWorldOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageFromWorldOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiFromWorld = [navFromWorld.tabBarItem initWithTitle:@"WORLD" image:newImageFromWorldOn selectedImage:newImageFromWorldOff];
+    [navFromWorld setTabBarItem:tbiFromWorld];
+    navFromWorld.tabBarItem.imageInsets = tabInsets;
+    
+    
+    
+    //tab Camera (da spostare in navigation bar)
+    /*UIImage* imageCameraOn = [UIImage imageNamed:@"ic_btn_photo"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageCameraOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageCameraOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageCameraOff = [UIImage imageNamed:@"ic_btn_photo"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageCameraOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImagecameraOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiCamera = [navCam.tabBarItem initWithTitle:@"CAMERA" image:newImageCameraOn selectedImage:newImagecameraOff];
+    [navCam setTabBarItem:tbiCamera];
+    navCam.tabBarItem.imageInsets = tabInsets;
+    */
+     
+    
+    
+    //4.tab Profile
     UIImage* imageProfileOn = [UIImage imageNamed:@"ic_tab_profile_on"];
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imageProfileOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -305,43 +314,48 @@
     UITabBarItem *tbiProfile = [navProfile.tabBarItem initWithTitle:@"PROFILE" image:newImageProfileOn selectedImage:newImageProfileOff];
     [navProfile setTabBarItem:tbiProfile];
     navProfile.tabBarItem.imageInsets = tabInsets;
+
+    //5.tab search
+    UIImage* imageSearchOn = [UIImage imageNamed:@"ic_tab_settings_on"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageSearchOn drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageSearchOn = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage* imageSearchOff = [UIImage imageNamed:@"ic_tab_settings_off"];
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [imageSearchOff drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImageSearchOff = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UITabBarItem *tbiSearch = [navSearch.tabBarItem initWithTitle:@"SEARCH" image:newImageSearchOn selectedImage:newImageSearchOff];
+    [navSearch setTabBarItem:tbiSearch];
+    navSearch.tabBarItem.imageInsets = tabInsets;
+
+    [[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, 10)
+                                               forBarMetrics:UIBarMetricsDefault];
+    
+    [[UITabBar appearance] setBarTintColor:COLORS_TABBAR_BACK];
     
     
-    //TAB BAR
-    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tab_bar_back"]];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.tabController.navigationController.navigationItem.rightBarButtonItem = rightButton;
     
+    //UI Appearance
+    NSShadow *clearShadow = [[NSShadow alloc] init];
+    clearShadow.shadowColor = [UIColor clearColor];
+    clearShadow.shadowOffset = CGSizeMake(0, 0);
     
-    OSCHECK_IF_IOS7_OR_GREATER(
-                               [self.tabController.tabBar setSelectionIndicatorImage:[UIImage imageNamed:@"background_selected_tab"]];
-                               )
-    OSCHECK_IF_PRE_IOS7(
-                        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"background_selected_tab"]];
-                        )
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{
+       NSShadowAttributeName : clearShadow,
+       NSForegroundColorAttributeName : [UIColor blackColor]
+       }
+     ];
+    [[UINavigationBar appearance] setBarTintColor:COLORS_NAV_BAR];
     
-    //NAVIGATION BAR
-    
-    //        OSCHECK_IF_IOS7_OR_GREATER(
-    //                                 [[UINavigationBar appearance] setTintColor:COLORS_NAV_TEXT];
-    //[[UINavigationBar appearance] setBarTintColor:COLORS_NAV_BAR];
-    //                               )
-    
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"background_tile_actionbar"] forBarMetrics:UIBarMetricsDefault];
-    
-    //    [[UINavigationBar appearance] setTitleTextAttributes: @{
-    //                                                          UITextAttributeTextColor:COLORS_NAV_TEXT,
-    //                                                        UITextAttributeTextShadowColor:[UIColor clearColor],
-    //                                                      UITextAttributeFont:[UIFont fontWithName:@"TrajanPro-Regular" size:17]
-    //                                                    }];
-    
-    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"navbar-shadow.png"] ];
-    
-    //[[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTintColor: COLORS_HOME_TEXTHIGH];
-    
-    [[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, 10) forBarMetrics:UIBarMetricsDefault];
     
     [self.window makeKeyAndVisible];
     
-    //}
     
 }
 

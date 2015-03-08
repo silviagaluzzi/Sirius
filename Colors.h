@@ -8,7 +8,7 @@
 
 #define COLORS_TABBAR_BACK [UIColor whiteColor]
 #define COLORS_NAV_TEXT [UIColor colorWithRed:105/255.0 green:80/255.0 blue:35/255.0 alpha:1]
-#define COLORS_NAV_BAR [UIColor whiteColor]
+#define COLORS_NAV_BAR [UIColor colorWithRed:32/255.0 green:128/255.0 blue:240/255.0 alpha:1]
 
 #define COLORS_TITLE_TEXT [UIColor colorWithRed:105/255.0 green:80/255.0 blue:35/255.0 alpha:1]
 

@@ -153,7 +153,8 @@
 
 - (void)loggedInAsUser:(SiriusUser *)user {
     
-    //if (![[MainController sharedController] isValidUser:user] && [PFFacebookUtils isLinkedWithUser: user]) {
+    //TODO: SISTEMARE!!!
+/*    if (![[MainController sharedController] isValidUser:user] && [PFFacebookUtils isLinkedWithUser: user]) {
         
         [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
         [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
@@ -168,16 +169,15 @@
         }];
     
     
-//    } else {
+    } else {
         
-  //      if (!user.displayName) {
-    //        user.displayName	= [user username];
-      //      [user saveEventually];
+        //if (!user.displayName) {
+          //  user.displayName	= [user username];
+            //[user saveEventually];
         //}
         
-        
-        //[self dismissViewControllerAnimated:YES completion:nil];
-    //}
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }*/
  
  
     //TODO:PUSH NOTIFICATIONS

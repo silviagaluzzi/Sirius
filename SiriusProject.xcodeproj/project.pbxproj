@@ -1009,9 +1009,11 @@
 		09ABC07713A1D52D009C3FCF /* SiriusProject */ = {
 			isa = PBXGroup;
 			children = (
+				55A86C721AAC94AE00A8F5BE /* Search */,
+				55A86C711AAC94A300A8F5BE /* FromWorld */,
+				55C8DDFE1AA507AF00A13C15 /* Common */,
 				55DDBBEB1AA8FDF600D3BFE3 /* Feed */,
 				55DDBBE81AA8FDE400D3BFE3 /* Activity */,
-				55C8DDFE1AA507AF00A13C15 /* Common */,
 				55C8DDFA1AA5021300A13C15 /* Profile */,
 				55DCCE921A9E768400EBA240 /* Auth */,
 				5554BF091A8AA66500B3A408 /* Models */,
@@ -1097,6 +1099,20 @@
 				5554BDA31A89607100B3A408 /* SiriusActivity.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		55A86C711AAC94A300A8F5BE /* FromWorld */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FromWorld;
+			sourceTree = "<group>";
+		};
+		55A86C721AAC94AE00A8F5BE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		55C8DDFA1AA5021300A13C15 /* Profile */ = {
@@ -2284,7 +2300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Silvia Galuzzi (9749L2XWVD)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2309,7 +2325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Silvia Galuzzi (9749L2XWVD)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
